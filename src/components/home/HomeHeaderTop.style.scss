@@ -1,0 +1,16 @@
+.homeheadertop-input{
+    width: 87%;
+}
+.dropdown-menu{
+    box-shadow:  0px 4px 10px rgba(37, 47, 63, 0.2);
+    border: 0;
+    li{
+        a{
+            transition: .3s;
+            &:hover{
+                color: white;
+                background-color: #ff4b7e;
+            }
+        }
+    }
+}

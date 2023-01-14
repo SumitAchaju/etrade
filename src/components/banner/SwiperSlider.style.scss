@@ -1,0 +1,156 @@
+.banner-image {
+  position: relative;
+  img {
+    position: relative;
+    z-index: 3;
+    animation: image-revel 1.3s;
+    max-width: 300px;
+    max-height: 300px;
+    translate: 20px 0;
+  }
+  &::after {
+    content: "";
+    height: 288px;
+    width: 288px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    z-index: 1;
+  }
+}
+
+.swiper {
+  height: 100%;
+}
+.offernamelogo{
+    animation: offer-revel .9s;
+}
+.offertitle {
+  width: 95%;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03rem;
+  margin: 15px 0 35px;
+  animation: offer-revel 1.3s;
+}
+.offer-shop-now {
+  a {
+    color: rgb(25, 25, 25);
+    position: relative;
+    font-weight: bold;
+    transition: .3s;
+    animation: offer-revel 1.6s;
+    &:hover{
+        color: #ff4b7e;
+    }
+    &:hover i::after{
+        background-color: #ff4b7e;
+    }
+    &:hover i{
+        margin-left: 5px;
+    }
+    i{
+        margin-left: 15px;
+        transition: .3s;
+    }
+    i {
+      &::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: gray;
+        position: absolute;
+        transition: .3s;
+        bottom: -5px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.featurebannerbox{
+  padding: 25px 0;
+  img{
+    max-width: 125px;
+  }
+  p{
+    padding: 15px 0 5px;
+  }
+}
+
+@keyframes offer-revel {
+    from{
+        translate: 0px 40px;
+        opacity: 0;
+    }
+    to {
+        translate: 0px 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes image-revel {
+    from{
+        translate: 150px 0px;
+        opacity: 0;
+    }
+    to{
+        translate: 20px 0px;
+        opacity: 1;   
+    }
+}
+
+@media (max-width:576px) {
+  .offertitle{
+    font-size: 25px;
+    margin: 10px 0 20px;
+  }
+  .banner-image{
+    img{
+      max-width: 180px;
+      max-height: 180px;
+    }
+    &::after{
+      width: 190px;
+      height: 190px;
+    }
+  }
+  .featurebannerbox{
+    img{
+      max-width: 60px;
+    }
+    p{
+      padding: 0;
+    }
+    padding: 8px;
+  }
+}
+
+@media (max-width:768px) and (min-width:577px){
+  .offertitle{
+    font-size: 35px;
+    margin: 10px 0 20px;
+  }
+  .banner-image{
+    img{
+      max-width: 230px;
+      max-height: 230px;
+    }
+    &::after{
+      width: 235px;
+      height: 235px;
+    }
+  }
+  .featurebannerbox{
+    img{
+      max-width: 80px;
+    }
+    p{
+      padding: 0;
+    }
+    padding: 8px;
+  }
+}
