@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HomeNavigation.style.scss";
-import OffCanvas from "../offcanvas/OffCanvas";
+import OffCanvas from '../../offcanvas/OffCanvas'
 import { categoriesData } from "./HomeBanner";
 
 export default function HomeNavigation() {

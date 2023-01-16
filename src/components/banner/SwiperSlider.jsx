@@ -5,9 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import "./SwiperSlider.style.scss";
 import { Link } from "react-router-dom";
 
@@ -18,11 +16,13 @@ export default function BannerSlider() {
       modules={[Pagination, A11y]}
       spaceBetween={0}
       slidesPerView={1}
+      loop="true"
       pagination={{ clickable: true }}
+      onSlideChange={()=>{}}
     >
-      {slideData.map( (data,index) => (
+      {slideData.map((data, index) => (
         <SwiperSlide key={index} className="h-100">
-          <Slides {...data} />
+          <Slides {...data} index isActive />
         </SwiperSlide>
       ))}
     </Swiper>
@@ -32,7 +32,7 @@ export default function BannerSlider() {
 function Slides(props) {
   return (
     <>
-      <div className="bannerslider w-100 h-100 py-3 row align-items-center justify-content-evenly px-5">
+      <div className="bannerslider active-slider w-100 h-100 py-3 row align-items-center justify-content-evenly px-5">
         <div className="banner-content col-6">
           <span
             style={{ fontSize: "14px" }}
@@ -49,7 +49,11 @@ function Slides(props) {
           </div>
         </div>
         <div className="banner-image col-6 m-auto d-flex justify-content-center">
-          <img className="offerimage" src={props?.offerImage} alt="offerImage" />
+          <img
+            className="offerimage"
+            src={props?.offerImage}
+            alt="offerImage"
+          />
         </div>
       </div>
     </>

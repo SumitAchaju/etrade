@@ -3,7 +3,6 @@
   img {
     position: relative;
     z-index: 3;
-    animation: image-revel 1.3s;
     max-width: 300px;
     max-height: 300px;
     translate: 20px 0;
@@ -20,12 +19,8 @@
     z-index: 1;
   }
 }
-
 .swiper {
   height: 100%;
-}
-.offernamelogo{
-    animation: offer-revel .9s;
 }
 .offertitle {
   width: 95%;
@@ -34,7 +29,6 @@
   line-height: 1.2;
   letter-spacing: -0.03rem;
   margin: 15px 0 35px;
-  animation: offer-revel 1.3s;
 }
 .offer-shop-now {
   a {
@@ -42,7 +36,6 @@
     position: relative;
     font-weight: bold;
     transition: .3s;
-    animation: offer-revel 1.6s;
     &:hover{
         color: #ff4b7e;
     }
@@ -153,4 +146,20 @@
     }
     padding: 8px;
   }
+}
+
+.active-slider{
+  img{
+    animation: image-revel 1.3s;
+  }
+  .offertitle{
+  animation: offer-revel 1.3s;
+  }
+  .offernamelogo{
+    animation: offer-revel .9s;
+}
+.offer-shop-now{
+  animation: offer-revel 1.6s;
+}
+
 }

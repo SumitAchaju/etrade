@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HomeBanner.style.scss";
-import BannerSlider from "../banner/SwiperSlider";
-import FeatureBanner from "../banner/FeatureBanner";
+import BannerSlider from "../../banner/SwiperSlider";
+import FeatureBanner from "../../banner/FeatureBanner";
 
 export default function HomeBanner() {
   return (
