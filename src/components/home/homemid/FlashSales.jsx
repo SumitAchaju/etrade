@@ -109,9 +109,9 @@ function SlideCard({ item }) {
           ) : null}
         </div>
         <div className="flashproductcontent">
-          <p>{item.title}</p>
-          <div className="d-flex">
-            <span>${item.perviousPrice}</span>
+          <p className="text-center fw-bold mt-4">{item.title}</p>
+          <div className="d-flex gap-1 justify-content-center">
+            <span style={{color:"gray",textDecoration:"line-through"}}>${item.perviousPrice}</span>
             <span>${item.newPrice}</span>
           </div>
         </div>
@@ -130,58 +130,57 @@ const data = [
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-02.png",
   },
   {
-    title: "Level 20 RGB Cherry",
-    perviousPrice: 80,
-    newPrice: 60,
-    discount: 20,
+    title: "Sky Blue T-shirt",
+    perviousPrice: 50,
+    newPrice: 40,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-19.png",
   },
   {
-    title: "Level 20 RGB Cherry",
-    perviousPrice: 80,
-    newPrice: 60,
-    discount: 20,
+    title: "Women's Style Hat",
+    perviousPrice: 30,
+    newPrice: 24,
+    discount: 50,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-6.png",
   },
   {
-    title: "Level 20 RGB Cherry",
-    perviousPrice: 80,
-    newPrice: 60,
-    discount: 20,
+    title: "Diamond Ring",
+    perviousPrice: 50,
+    newPrice: 40,
+    discount: 30,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/jewellery/product-4.png",
   },
   {
-    title: "Level 20 RGB Cherry",
-    perviousPrice: 80,
-    newPrice: 60,
-    discount: 20,
+    title: "Neue Sofa Chair",
+    perviousPrice: 60,
+    newPrice: 50,
+    discount: 30,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-5.png",
   },
   {
-    title: "Level 20 RGB Cherry",
-    perviousPrice: 80,
-    newPrice: 60,
-    discount: 20,
+    title: "3D™ wireless headset",
+    perviousPrice: 30,
+    newPrice: 24,
+    discount: 50,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-04.png",
   },
   {
-    title: "Level 20 RGB Cherry",
+    title: "Comfortale Chair",
     perviousPrice: 80,
     newPrice: 60,
-    discount: 20,
+    discount: 25,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-4.png",
   },
   {
-    title: "Level 20 RGB Cherry",
-    perviousPrice: 80,
-    newPrice: 60,
-    discount: 20,
+    title: "Leather Hand Bag",
+    perviousPrice: 100,
+    newPrice: 75,
+    discount: 25,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-3.png",
   },
