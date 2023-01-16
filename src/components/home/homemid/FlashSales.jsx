@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Navigation, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,13 +9,36 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 export default function FlashSales() {
+  const navigationNextRef = useRef(null);
+  const navigationPrevRef = useRef(null);
+
   return (
     <>
-      <div className="container my-5">
+      <div className="container my-5 pt-4">
         <div className="todayflashsales">
-          <div className="flex">
-            <i className="bi bi-fire"></i>
-            <span>Todays Sales</span>
+          <div className="d-flex align-items-center gap-2 mb-2">
+            <i style={{color:"white",background:"#8c71db",fontSize:"12px",padding:"5px 7px"}} className="bi bi-fire rounded-circle"></i>
+            <span style={{color:"#8c71db",fontSize:"16px",fontWeight:"bold"}}>Today's</span>
+          </div>
+          <div className="row mb-5">
+            <h2 className="col-12 col-lg-3" style={{fontWeight:700,fontSize:"35px"}}>Flash Sales</h2>
+            <div className="col-8 col-lg-7 timer d-flex align-items-center gap-1 gap-sm-2">
+              <span style={{background:"#f7f7f7",fontSize:"14px",fontWeight:"bold",color:"gray"}} className="rounded-circle p-4">00</span>
+              <i style={{fontSize:"12px",color:"gray"}} className="bi bi-three-dots-vertical"></i>
+              <span style={{background:"#f7f7f7",fontSize:"14px",fontWeight:"bold",color:"gray"}} className="rounded-circle p-4">00</span>
+              <i style={{fontSize:"12px",color:"gray"}} className="bi bi-three-dots-vertical"></i>
+              <span style={{background:"#f7f7f7",fontSize:"14px",fontWeight:"bold",color:"gray"}} className="rounded-circle p-4">00</span>
+              <i style={{fontSize:"12px",color:"gray"}} className="bi bi-three-dots-vertical"></i>
+              <span style={{background:"#f7f7f7",fontSize:"14px",fontWeight:"bold",color:"gray"}} className="rounded-circle p-4">00</span>
+            </div>
+            <div className="col-4 col-lg-2 slidernavigation d-flex align-items-center gap-1 gap-sm-2 justify-content-end">
+              <div ref={navigationPrevRef} className="prev">
+              <i style={{background:"#f7f7f7",color:"gray",fontSize:"18px"}} className="bi bi-arrow-left p-3 rounded-circle"></i>
+              </div>
+              <div ref={navigationNextRef} className="next">
+              <i style={{background:"#f7f7f7",color:"gray",fontSize:"18px"}} className="bi bi-arrow-right p-3 rounded-circle"></i>
+              </div>
+            </div>
           </div>
         </div>
         <Swiper
@@ -23,21 +46,35 @@ export default function FlashSales() {
           modules={[Navigation, A11y]}
           spaceBetween={20}
           slidesPerView={1}
-          navigation
+          slidesPerGroup={1}
+          loop="true"
+          speed={800}
           className="myswipper m-auto"
           pagination={{ clickable: true }}
+          navigation={{
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current,
+          }}
+         onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = navigationPrevRef.current;
+              swiper.params.navigation.nextEl = navigationNextRef.current;
+         }}
           breakpoints={{
             640: {
               slidesPerView: 2,
+              slidesPerGroup:2
             },
             992: {
               slidesPerView: 3,
+              slidesPerGroup:3
             },
             1200: {
               slidesPerView: 4,
+              slidesPerGroup:4
             },
             1400: {
               slidesPerView: 4,
+              slidesPerGroup:4
             },
           }}
         >
