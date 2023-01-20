@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import "./scss/Banner.style.scss";
 
 export default function FeatureBanner() {
     const {img,title,price} = featurebannerdata

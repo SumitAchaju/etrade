@@ -36,13 +36,13 @@
 }
 .home-navbar-icons {
   div {
+    a{
+      padding: 5px 10px;
+    }
     i {
       color: rgb(79, 79, 79);
       font-size: 22px;
       font-weight: bold;
-      transition: .3s;
-      position: relative;
-      z-index: 2;
       &[value]:after{
         content:attr(value);
         font-size:12px;
@@ -57,31 +57,6 @@
         z-index: 2;
         opacity:0.9;
     }
-    }
-    a{
-        position: relative;
-        &::after {
-            content: "";
-            height: 45px;
-            width: 45px;
-            background-color: #ff4b7e;
-            transform: scale(0);
-            border-radius: 50%;
-            position: absolute;
-            transition: 0.3s;
-            top: -24%;
-            left: -54%;
-          }
-          &:hover{
-              &::after{
-                top: -24%;
-                left: -54%;
-                  transform: scale(1);
-              }
-              i{
-                  color: white;
-              }
-          }
     }
   }
 }

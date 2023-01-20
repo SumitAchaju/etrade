@@ -1,0 +1,57 @@
+import React from "react";
+import Timer from "../timer/Timer";
+
+export default function SliderTitle({
+  title,
+  timer,
+  navigationNextRef,
+  navigationPrevRef,
+  styleClass
+}) {
+
+  const navigationClassDefault =
+    "slidernavigation d-flex align-items-center gap-1 gap-sm-2 justify-content-end";
+
+  const navigationClass = timer
+    ? navigationClassDefault + " col-4 col-lg-2"
+    : navigationClassDefault + " col-5 col-lg-6";
+
+  const navStyle ={
+    color: "gray",
+    fontSize: "18px",
+    cursor:"pointer",
+    padding:"13px 18px",
+  }
+  const styleClassDiv = styleClass?styleClass:"mb-5"
+  return (
+    <>
+      <div className={`row ${styleClassDiv}`}>
+        <h2
+          className={timer ? "col-12 col-lg-3" : "col-7 col-lg-6"}
+          style={{ fontWeight: 700, fontSize: "35px" }}
+        >
+          {title}
+        </h2>
+        {timer ? (
+          <div className="col-8 col-lg-7 timer d-flex align-items-center gap-1 gap-sm-2">
+            <Timer {...timer} />
+          </div>
+        ) : null}
+        <div className={navigationClass}>
+          <div ref={navigationPrevRef} style={{  background: "#f7f7f7"}} className="prev hover-effect-circle">
+            <i
+              style={navStyle}
+              className="bi bi-arrow-left rounded-circle"
+            ></i>
+          </div>
+          <div ref={navigationNextRef} style={{  background: "#f7f7f7"}}  className="next hover-effect-circle">
+            <i
+              style={navStyle}
+              className="bi bi-arrow-right rounded-circle"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

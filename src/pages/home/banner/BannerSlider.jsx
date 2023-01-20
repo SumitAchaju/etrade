@@ -1,35 +1,36 @@
-// import Swiper core and required modules
-import { Pagination, A11y } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "./SwiperSlider.style.scss";
+import { EffectFade, Pagination } from "swiper";
 import { Link } from "react-router-dom";
+import Slider from '../../../components/slider/Slider'
+
+import "swiper/css/effect-fade";
+import "./scss/Banner.style.scss";
 
 export default function BannerSlider() {
   return (
-    <Swiper
-      // install Swiper modules
-      modules={[Pagination, A11y]}
-      spaceBetween={0}
-      slidesPerView={1}
-      loop="true"
-      pagination={{ clickable: true }}
-      onSlideChange={()=>{}}
-    >
-      {slideData.map((data, index) => (
-        <SwiperSlide key={index} className="h-100">
-          <Slides {...data} index isActive />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <>
+      <Slider
+        property={{
+          modules: [Pagination, EffectFade],
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true,
+          },
+          spaceBetween: 0,
+          slidesPerView: 1,
+          loop: true,
+          speed: 800,
+          pagination: { clickable: true },
+        }}
+        value={{
+          SlideCard,
+          slideData,
+        }}
+      />
+    </>
   );
 }
 
-function Slides(props) {
+function SlideCard(props) {
   return (
     <>
       <div className="bannerslider active-slider w-100 h-100 py-3 row align-items-center justify-content-evenly px-5">

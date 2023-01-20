@@ -19,9 +19,6 @@
     z-index: 1;
   }
 }
-.swiper {
-  height: 100%;
-}
 .offertitle {
   width: 95%;
   font-size: 50px;
@@ -64,6 +61,22 @@
   }
 }
 
+.active-slider{
+  img{
+    animation: image-revel 1.3s;
+  }
+  .offertitle{
+  animation: offer-revel 1.3s;
+  }
+  .offernamelogo{
+    animation: offer-revel .9s;
+}
+.offer-shop-now{
+  animation: offer-revel 1.6s;
+}
+
+}
+
 .featurebannerbox{
   padding: 25px 0;
   img{
@@ -73,6 +86,7 @@
     padding: 15px 0 5px;
   }
 }
+
 
 @keyframes offer-revel {
     from{
@@ -148,18 +162,3 @@
   }
 }
 
-.active-slider{
-  img{
-    animation: image-revel 1.3s;
-  }
-  .offertitle{
-  animation: offer-revel 1.3s;
-  }
-  .offernamelogo{
-    animation: offer-revel .9s;
-}
-.offer-shop-now{
-  animation: offer-revel 1.6s;
-}
-
-}

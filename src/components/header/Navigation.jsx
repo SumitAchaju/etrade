@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./HomeNavigation.style.scss";
-import OffCanvas from '../../offcanvas/OffCanvas'
-import { categoriesData } from "./HomeBanner";
+import "./scss/Navigation.style.scss";
+import OffCanvas from '../offcanvas/OffCanvas'
 
-export default function HomeNavigation() {
+export default function Navigation() {
   return (
     <>
       <nav className="navlink-home-container">
@@ -31,11 +30,12 @@ export default function HomeNavigation() {
               </div>
             </div>
             <div className="col-xl-2 col-lg-1 col-md-7 col-6 home-navbar-icons">
-              <div className="d-flex gap-3 align-items-center justify-content-end">
-                <Link to=" ">
+              <div className="d-flex gap-1 align-items-center justify-content-end">
+                <Link to=" " className="hover-effect-circle">
                   <i className="bi bi-heart"></i>
                 </Link>
                 <Link
+                className="hover-effect-circle"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#endcart"
                   aria-controls="endcart"
@@ -43,14 +43,15 @@ export default function HomeNavigation() {
                 >
                   <i className="bi bi-cart" value="3"></i>
                 </Link>
-                <Link to=" ">
+                <Link className="hover-effect-circle" to=" ">
                   <i className="bi bi-person"></i>
                 </Link>
                 <Link
+                
                   data-bs-toggle="offcanvas"
                   data-bs-target="#endmenu"
                   aria-controls="endmenu"
-                  className="d-lg-none d-xl-none"
+                  className="d-lg-none d-xl-none hover-effect-circle"
                   to=""
                 >
                   <i className="bi bi-list"></i>
@@ -146,5 +147,43 @@ export const HomeNavLinks = [
   {
     title: "Contact",
     route: "",
+  },
+];
+
+const imglink =
+  "https://new.axilthemes.com/demo/template/etrade/assets/images/product/categories";
+
+export const categoriesData = [
+  {
+    title: "Fashion",
+    img: `${imglink}/cat-01.png`,
+  },
+  {
+    title: "Electronics",
+    img: `${imglink}/cat-02.png`,
+  },
+  {
+    title: "Home Decor",
+    img: `${imglink}/cat-03.png`,
+  },
+  {
+    title: "Medicine",
+    img: `${imglink}/cat-04.png`,
+  },
+  {
+    title: "Furniture",
+    img: `${imglink}/cat-05.png`,
+  },
+  {
+    title: "Crafts",
+    img: `${imglink}/cat-06.png`,
+  },
+  {
+    title: "Accessories",
+    img: `${imglink}/cat-07.png`,
+  },
+  {
+    title: "Camera",
+    img: `${imglink}/cat-08.png`,
   },
 ];

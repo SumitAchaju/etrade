@@ -1,0 +1,46 @@
+.offercheckbtn {
+  display: inline-block;
+  margin-top: 25px;
+  a {
+    font-weight: bold;
+    padding: 15px 35px;
+    font-size: 18px;
+    background: #3577f0;
+    color: white;
+    display: inline-block;
+    border-radius: 999px;
+  }
+}
+
+.offerhome {
+  .offerhomeimage {
+    img {
+      width: 80%;
+    }
+    margin-top: -165px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+  }
+}
+
+@media (max-width: 1200px) {
+  .offerhome {
+    h1 {
+      width: 90%;
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(51, 51, 51);
+    }
+  }
+  .offerhomeimage {
+    img {
+      width: 100%;
+    }
+    margin-top: 35px !important;
+    text-align: center;
+  }
+}
