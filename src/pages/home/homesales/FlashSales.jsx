@@ -5,6 +5,7 @@ import SliderCategory from "../../../components/slider/SliderCategory";
 import Slider, { breakpoints } from "../../../components/slider/Slider";
 import SliderTitle from "../../../components/slider/SliderTitle";
 import SliderImage from "../../../components/slider/SliderImage";
+import SliderContent from "../../../components/slider/SliderContent";
 
 export default function FlashSales() {
   const navigationNextRef = useRef(null);
@@ -73,33 +74,9 @@ export default function FlashSales() {
 function SlideCard(props) {
   return (
     <>
-      <div className="flashsale">
+      <div style={{cursor:"pointer"}} className="flashsale">
         <SliderImage {...props} />
-        <div className="flashproductcontent">
-          <p
-            className="text-center fw-bold mt-4"
-            style={{ fontSize: "17px", color: "#757575" }}
-          >
-            {props.title}
-          </p>
-          <div className="d-flex gap-2 justify-content-center">
-            <span
-              style={{
-                color: "gray",
-                textDecoration: "line-through",
-                textDecorationColor: "gray",
-                fontWeight: "bold",
-              }}
-            >
-              ${props.perviousPrice}
-            </span>
-            <span
-              style={{ fontWeight: "bold", fontSize: "18px", color: "#757575" }}
-            >
-              ${props.newPrice}
-            </span>
-          </div>
-        </div>
+        <SliderContent {...props} />
       </div>
     </>
   );

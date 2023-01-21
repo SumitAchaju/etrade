@@ -6,6 +6,8 @@ import FlashSales from "./homesales/FlashSales";
 import BrowseByCategory from "./homesales/BrowseByCategory";
 import BestSellingProduct from "./homesales/BestSellingProduct";
 import HomeOffer, { homeOfferData } from "./homeoffer/HomeOffer";
+import ExploreProduct from "./homesales/ExploreProduct";
+import HomeFeedBack from "./feedback/HomeFeedBack";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <BrowseByCategory />
       <BestSellingProduct/>
       <HomeOffer {...homeOfferData}/>
+      <ExploreProduct />
+      <HomeFeedBack />
     </>
   );
 }

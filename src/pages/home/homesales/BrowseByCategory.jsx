@@ -31,7 +31,6 @@ export default function BrowseByCategory() {
           property={{
             modules:[Navigation],
             spaceBetween:20,
-            loop:true,
             speed:800,
             pagination:{ clickable: true },
             navigation:{

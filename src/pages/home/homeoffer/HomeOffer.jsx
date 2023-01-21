@@ -72,7 +72,7 @@ export const homeOfferData = {
       background: "white",
       fontSize: "18px",
       fontWeight: "bold",
-      color: "gray",
+      color: "black",
       padding: "25px",
     },
     spanContent: "00",

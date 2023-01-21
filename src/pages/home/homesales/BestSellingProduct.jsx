@@ -5,6 +5,7 @@ import SliderImage from "../../../components/slider/SliderImage";
 import Slider from "../../../components/slider/Slider";
 import { Navigation } from "swiper";
 import { breakpoints } from "../../../components/slider/Slider";
+import { SliderContent1 } from "../../../components/slider/SliderContent";
 
 export default function BestSellingProduct() {
   const navigationNextRef = useRef(null);
@@ -56,58 +57,12 @@ export default function BestSellingProduct() {
 }
 
 function SlideCard(props) {
-  const { star } = props;
-  const fullStar = Array.from({ length: star }).map((_, i) => i + 1);
-  const emptyStar = Array.from({ length: 5 - star }).map((_, i) => i + 1);
-  const halfStar = star % 1 !== 0 ? 1 : 0;
+
   return (
     <>
-      <div className="bestsellingproductslide">
+      <div style={{cursor:"pointer"}} className="bestsellingproductslide">
         <SliderImage {...props} />
-        <div className="staricons d-flex gap-1 mt-4">
-          <div>
-            {fullStar.map((num) => (
-              <i
-                key={num}
-                style={{ color: "#FFDC60" }}
-                className="bi bi-star-fill"
-              ></i>
-            ))}
-            {halfStar ? (
-              <i style={{ color: "#FFDC60" }} className="bi bi-star-half"></i>
-            ) : null}
-            {emptyStar.map((num) => (
-              <i
-                key={num}
-                style={{ color: "#FFDC60" }}
-                className="bi bi-star"
-              ></i>
-            ))}
-          </div>
-          <span style={{ color: "gray" }}>{`(${props.reviewNo})`}</span>
-        </div>
-        <h6 style={{ color: "gray" }} className="my-2">
-          {props.title}
-        </h6>
-        <div className="price d-flex gap-2">
-          <span
-            style={{ color: "#303030", fontSize: "18px", fontWeight: "bold" }}
-          >
-            ${props.newPrice}
-          </span>
-          {props.previousPrice ? (
-            <span
-              style={{
-                color: "#c2c2c2",
-                textDecoration: "line-through #c2c2c2",
-                fontSize: "18px",
-                fontWeight: "bold",
-              }}
-            >
-              ${props.previousPrice}
-            </span>
-          ) : null}
-        </div>
+        <SliderContent1 {...props} />
       </div>
     </>
   );
