@@ -109,6 +109,10 @@ const slideData = [
 ];
 
 const breakpoints = {
+  0: {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+  },
   576: {
     slidesPerView: 1,
     slidesPerGroup: 1,
