@@ -1,0 +1,44 @@
+// ProductContentSelectColor
+
+.select-color {
+  .color {
+    cursor: pointer;
+    padding: 5.5px;
+  }
+  .selected {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-option-select);
+    outline-offset: 4px;
+  }
+}
+
+// ProductContentAddCart
+
+.product-add-cart {
+  i {
+    padding: 8px 10px;
+    font-size: 15px;
+    background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #ff4b7e;
+      color: white;
+    }
+  }
+  button {
+    width: 120px;
+    font-size: 14px;
+    padding: 10px 2px;
+    background-color: #ff4b7e;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    &:hover {
+      scale: 1.1;
+      background-color: #ff4b7e;
+      color: white;
+    }
+  }
+}

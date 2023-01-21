@@ -23,6 +23,7 @@ export default function HomeFeedBack() {
 
             <SliderTitle
               title="Users Feedback"
+              styleClass="mb-4"
               navigationNextRef={navigationNextRef}
               navigationPrevRef={navigationPrevRef}
             />

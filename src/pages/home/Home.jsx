@@ -8,6 +8,7 @@ import BestSellingProduct from "./homesales/BestSellingProduct";
 import HomeOffer, { homeOfferData } from "./homeoffer/HomeOffer";
 import ExploreProduct from "./homesales/ExploreProduct";
 import HomeFeedBack from "./feedback/HomeFeedBack";
+import NewArrival from "./homesales/NewArrival";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <HomeOffer {...homeOfferData}/>
       <ExploreProduct />
       <HomeFeedBack />
+      <NewArrival/>
     </>
   );
 }

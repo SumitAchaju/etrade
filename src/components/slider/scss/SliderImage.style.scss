@@ -44,28 +44,6 @@
       transition: 0.7s;
       position: absolute;
       gap: 10px;
-      i {
-        padding: 8px 10px;
-        font-size: 15px;
-        background-color: white;
-        transition: 0.3s;
-        cursor: pointer;
-        &:hover {
-          scale: 1.1;
-        }
-      }
-      button {
-        width: 120px;
-        font-size: 14px;
-        padding: 10px 2px;
-        background-color: #ff4b7e;
-        color: white;
-        font-weight: bold;
-        transition: 0.3s;
-        &:hover {
-          scale: 1.1;
-        }
-      }
     }
   }
 
@@ -104,7 +82,7 @@
   }
   @media (max-width: 575px) {
     .productimg {
-      width: 95%;
+      width: 98%;
       height: inherit;
     }
   }

@@ -85,7 +85,7 @@ function SlideCard(props) {
 const slideData = [
   {
     title: "Level 20 RGB Cherry",
-    perviousPrice: 80,
+    previousPrice: 80,
     newPrice: 60,
     discount: 20,
     productImage:
@@ -93,14 +93,14 @@ const slideData = [
   },
   {
     title: "Sky Blue T-shirt",
-    perviousPrice: 50,
+    previousPrice: 50,
     newPrice: 40,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-19.png",
   },
   {
     title: "Women's Style Hat",
-    perviousPrice: 30,
+    previousPrice: 30,
     newPrice: 24,
     discount: 50,
     productImage:
@@ -108,7 +108,7 @@ const slideData = [
   },
   {
     title: "Diamond Ring",
-    perviousPrice: 50,
+    previousPrice: 50,
     newPrice: 40,
     discount: 30,
     productImage:
@@ -116,14 +116,14 @@ const slideData = [
   },
   {
     title: "Neue Sofa Chair",
-    perviousPrice: 60,
+    previousPrice: 60,
     newPrice: 50,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-5.png",
   },
   {
     title: "3D™ wireless headset",
-    perviousPrice: 30,
+    previousPrice: 30,
     newPrice: 24,
     discount: 50,
     productImage:
@@ -131,7 +131,7 @@ const slideData = [
   },
   {
     title: "Comfortale Chair",
-    perviousPrice: 80,
+    previousPrice: 80,
     newPrice: 60,
     discount: 25,
     productImage:
@@ -139,7 +139,7 @@ const slideData = [
   },
   {
     title: "Leather Hand Bag",
-    perviousPrice: 100,
+    previousPrice: 100,
     newPrice: 75,
     productImage:
       "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-3.png",
