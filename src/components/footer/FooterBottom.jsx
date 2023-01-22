@@ -8,7 +8,7 @@ export default function FooterBottom() {
           <div className="col-12 col-lg-4">
             <div
               style={{ color: "gray" }}
-              className="footerbottomicons d-flex align-items-center gap-1"
+              className="footerbottomicons justify-content-center justify-content-lg-start mb-1 d-flex align-items-center gap-1"
             >
               <div className="hover-effect-circle">
                 <i className="bi bi-facebook d-block"></i>
@@ -27,8 +27,8 @@ export default function FooterBottom() {
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-4">
-            <p className="fw-bold" style={{ color: "gray", fontSize: "14px" }}>
+          <div className="col-12 col-lg-4 mb-2 pb-1">
+            <p className="fw-bold text-center" style={{ color: "gray", fontSize: "14px" }}>
               © 2022. All rights reserved by Axilthemes.
             </p>
           </div>

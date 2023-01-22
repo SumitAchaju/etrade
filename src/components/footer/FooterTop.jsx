@@ -7,7 +7,7 @@ export default function FooterTop() {
         <div className="row">
           {footerTopData.map((item, index) => (
             <div
-              style={{ marginBottom: "25px" }}
+              style={{ marginBottom: "30px" }}
               key={index}
               className="col-12 col-md-6 col-lg-6 col-xl-3"
             >

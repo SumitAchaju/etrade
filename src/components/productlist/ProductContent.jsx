@@ -6,7 +6,7 @@ export default function ProductContentTitle(props) {
     <>
       <p
         className={`fw-bold ${props?.className}`}
-        style={{ fontSize: "17px", color: "#757575" }}
+        style={{fontSize: props.fontSize?props.fontSize:"17px", color: "#757575" }}
       >
         {props.title}
       </p>
@@ -52,17 +52,17 @@ export function ProductContentStar(props) {
           {fullStar.map((num) => (
             <i
               key={num}
-              style={{ color: "#FFDC60" }}
+              style={{ color: "#FFDC60",fontSize:props?.fontSize }}
               className="bi bi-star-fill"
             ></i>
           ))}
           {halfStar ? (
-            <i style={{ color: "#FFDC60" }} className="bi bi-star-half"></i>
+            <i style={{ color: "#FFDC60",fontSize:props?.fontSize }} className="bi bi-star-half"></i>
           ) : null}
           {emptyStar.map((num) => (
             <i
               key={num}
-              style={{ color: "#FFDC60" }}
+              style={{ color: "#FFDC60",fontSize:props?.fontSize }}
               className="bi bi-star"
             ></i>
           ))}
