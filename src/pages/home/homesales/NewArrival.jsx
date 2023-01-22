@@ -33,7 +33,7 @@ export default function NewArrival() {
                 modules: [Navigation],
                 spaceBetween: 20,
                 loop: true,
-                speed: 800,
+                speed: 600,
                 pagination: { clickable: true },
                 navigation: {
                   prevEl: navigationPrevRef.current,
@@ -93,6 +93,7 @@ const slideData =[
       title: "Nike Shoes",
       previousPrice: 80,
       newPrice: 100,
+      discount:10,
       color: ["#9d55c9", "#de6262", "#dea550"],
     },
     {
@@ -107,9 +108,10 @@ const slideData =[
     },
     {
       productImage:
-        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/jewellery/product-3.png",
+        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-5.png",
       star: 3.5,
       reviewNo: 53,
+      discount:20,
       title: "Diamond Bracelet",
       newPrice: 99,
       color: ["#9d55c9", "#de6262", "#dea550"],
@@ -127,7 +129,7 @@ const slideData =[
     },
     {
       productImage:
-        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-16.png",
+        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-11.png",
       star: 5,
       reviewNo: 101,
       title: "Womens Cosmetics",
@@ -137,7 +139,7 @@ const slideData =[
     },
     {
       productImage:
-        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-07.png",
+        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-12.png",
       star: 3.5,
       reviewNo: 5,
       title: "Denim White Ring",
@@ -148,7 +150,7 @@ const slideData =[
     },
     {
       productImage:
-        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-15.png",
+        "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-13.png",
       star: 5,
       reviewNo: 24,
       title: "Royal Watch",

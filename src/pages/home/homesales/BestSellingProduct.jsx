@@ -14,7 +14,7 @@ export default function BestSellingProduct() {
     modules: [Navigation],
     spaceBetween: 20,
     loop: true,
-    speed: 800,
+    speed: 600,
     pagination: { clickable: true },
     navigation: {
       prevEl: navigationPrevRef.current,
@@ -57,10 +57,9 @@ export default function BestSellingProduct() {
 }
 
 function SlideCard(props) {
-
   return (
     <>
-      <div style={{cursor:"pointer"}} className="bestsellingproductslide">
+      <div style={{ cursor: "pointer" }} className="bestsellingproductslide">
         <SliderImage {...props} />
         <SliderContent1 {...props} />
       </div>

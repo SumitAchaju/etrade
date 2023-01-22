@@ -4,7 +4,7 @@ import SliderTitle from "../../../components/slider/SliderTitle";
 import Slider from "../../../components/slider/Slider";
 import { Navigation } from "swiper";
 
-import './scss/BrowseByCategory.style.scss'
+import "./scss/BrowseByCategory.style.scss";
 
 export default function BrowseByCategory() {
   const navigationNextRef = useRef(null);
@@ -27,26 +27,26 @@ export default function BrowseByCategory() {
             navigationPrevRef={navigationPrevRef}
           />
 
-          <Slider 
-          property={{
-            modules:[Navigation],
-            spaceBetween:20,
-            speed:800,
-            pagination:{ clickable: true },
-            navigation:{
-              prevEl: navigationPrevRef.current,
-              nextEl: navigationNextRef.current,
-            },
-            onBeforeInit:(swiper) => {
-              swiper.params.navigation.prevEl = navigationPrevRef.current;
-              swiper.params.navigation.nextEl = navigationNextRef.current;
-            },
-            breakpoints:breakpoints
-          }}
-          value={{
-            SlideCard,
-            slideData
-          }}
+          <Slider
+            property={{
+              modules: [Navigation],
+              spaceBetween: 20,
+              speed: 600,
+              pagination: { clickable: true },
+              navigation: {
+                prevEl: navigationPrevRef.current,
+                nextEl: navigationNextRef.current,
+              },
+              onBeforeInit: (swiper) => {
+                swiper.params.navigation.prevEl = navigationPrevRef.current;
+                swiper.params.navigation.nextEl = navigationNextRef.current;
+              },
+              breakpoints: breakpoints,
+            }}
+            value={{
+              SlideCard,
+              slideData,
+            }}
           />
         </div>
       </div>
@@ -54,77 +54,77 @@ export default function BrowseByCategory() {
   );
 }
 
-
-function SlideCard(props){
-  return(
+function SlideCard(props) {
+  return (
     <>
-    <div className="borwsebycategory">
-      <div className="borwsebycategoryinner">
-        <div className="borwsebycategoryinnercontent text-center">
-          <img src={props.img} alt="img" />
-          <h6>{props.title}</h6>
+      <div className="borwsebycategory">
+        <div className="borwsebycategoryinner">
+          <div className="borwsebycategoryinnercontent text-center">
+            <img src={props.img} alt="img" />
+            <h6>{props.title}</h6>
+          </div>
         </div>
       </div>
-    </div>
     </>
-  )
+  );
 }
 
-const imgLink = "https://new.axilthemes.com/demo/template/etrade/assets/images/product/categories"
+const imgLink =
+  "https://new.axilthemes.com/demo/template/etrade/assets/images/product/categories";
 
 const slideData = [
   {
-    img:`${imgLink}/elec-4.png`,
-    title:"Phones"
+    img: `${imgLink}/elec-4.png`,
+    title: "Phones",
   },
   {
-    img:`${imgLink}/elec-5.png`,
-    title:"Computers"
+    img: `${imgLink}/elec-5.png`,
+    title: "Computers",
   },
   {
-    img:`${imgLink}/elec-11.png`,
-    title:"Accessories"
+    img: `${imgLink}/elec-11.png`,
+    title: "Accessories",
   },
   {
-    img:`${imgLink}/elec-6.png`,
-    title:"Laptops"
+    img: `${imgLink}/elec-6.png`,
+    title: "Laptops",
   },
   {
-    img:`${imgLink}/elec-2.png`,
-    title:"Moniter"
+    img: `${imgLink}/elec-2.png`,
+    title: "Moniter",
   },
   {
-    img:`${imgLink}/elec-7.png`,
-    title:"Networking"
+    img: `${imgLink}/elec-7.png`,
+    title: "Networking",
   },
   {
-    img:`${imgLink}/elec-8.png`,
-    title:"PC Gaming"
+    img: `${imgLink}/elec-8.png`,
+    title: "PC Gaming",
   },
   {
-    img:`${imgLink}/elec-1.png`,
-    title:"Smartwatches"
+    img: `${imgLink}/elec-1.png`,
+    title: "Smartwatches",
   },
   {
-    img:`${imgLink}/elec-9.png`,
-    title:"Headphones"
+    img: `${imgLink}/elec-9.png`,
+    title: "Headphones",
   },
   {
-    img:`${imgLink}/elec-10.png`,
-    title:"Camera & Photo"
+    img: `${imgLink}/elec-10.png`,
+    title: "Camera & Photo",
   },
   {
-    img:`${imgLink}/elec-8.png`,
-    title:"Video Games"
+    img: `${imgLink}/elec-8.png`,
+    title: "Video Games",
   },
   {
-    img:`${imgLink}/elec-1.png`,
-    title:"Sports"
+    img: `${imgLink}/elec-1.png`,
+    title: "Sports",
   },
-]
+];
 
-const breakpoints ={
-  0:{
+const breakpoints = {
+  0: {
     slidesPerView: 2,
     slidesPerGroup: 2,
   },
@@ -144,4 +144,4 @@ const breakpoints ={
     slidesPerView: 7,
     slidesPerGroup: 5,
   },
-}
+};

@@ -1,0 +1,39 @@
+.footersupport {
+  a {
+    color: gray !important;
+    transition: 0.3s;
+    &:hover {
+      color: black !important;
+    }
+  }
+}
+.footeraccountquicklink {
+  a {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: gray;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+.footerbottomicons {
+  i {
+    padding: 7px 10px;
+    cursor: pointer;
+  }
+}

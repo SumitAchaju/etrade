@@ -11,7 +11,7 @@ export default function Navigation() {
           <div className="row align-items-center">
             <div className="col-6 col-md-5 col-xl-2 col-lg-3 col-sm-6">
               <button
-                className="btn btn-primary gap-2 justify-content-start d-flex align-items-center py-3 rounded-0 px-5 w-100"
+                className="btn btn-primary gap-2 justify-content-start d-flex align-items-center py-3 rounded px-5 w-100"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#startcategory"
                 aria-controls="startcategory"
