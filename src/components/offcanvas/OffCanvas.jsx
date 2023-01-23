@@ -5,12 +5,14 @@ import ProductContentTitle, {
   ProductContentStar,
 } from "../productlist/ProductContent";
 import { Link } from "react-router-dom";
-import { HomeNavLinks,categoriesData } from "../header/Navigation";
+import { HomeNavLinks, categoriesData } from "../header/Navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart, removeItem } from "../../store/features/CartSlice";
 
 export default function OffCanvas(props) {
   const alignMent = props.align ? props.align : "end";
   const canvasId = props.canvasId;
-  const width = props.width?props.width:""
+  const width = props.width ? props.width : "";
   return (
     <>
       <div
@@ -18,7 +20,7 @@ export default function OffCanvas(props) {
         tabIndex={-1}
         id={canvasId}
         aria-labelledby={`${canvasId}Label`}
-        style={{width:width}}
+        style={{ width: width }}
       >
         <div className="offcanvas-header">
           {props.title ? (
@@ -27,12 +29,19 @@ export default function OffCanvas(props) {
             </h5>
           ) : null}
           <div
-          style={{background:"#f7f7f7"}}
+            style={{ background: "#f7f7f7" }}
             className="hover-effect-circle"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           >
-          <i style={{fontSize:"18px",fontWeight:"bolder",cursor:"pointer"}} className="bi bi-x px-2 py-1 d-block rounded-circle"></i>
+            <i
+              style={{
+                fontSize: "18px",
+                fontWeight: "bolder",
+                cursor: "pointer",
+              }}
+              className="bi bi-x px-2 py-1 d-block rounded-circle"
+            ></i>
           </div>
         </div>
         <div className="offcanvas-body">
@@ -43,7 +52,7 @@ export default function OffCanvas(props) {
   );
 }
 
-export function menuOffCanvasBody() {
+export function MenuOffCanvasBody() {
   return (
     <>
       <form className="position-relative mb-5">
@@ -65,7 +74,7 @@ export function menuOffCanvasBody() {
   );
 }
 
-export function categoryOffCanvasBody() {
+export function CategoryOffCanvasBody() {
   return (
     <ul className="offcanvas-menu mt-4">
       {categoriesData.map((item, index) => (
@@ -77,129 +86,90 @@ export function categoryOffCanvasBody() {
   );
 }
 
-export function cartOffCanvasBody() {
+export function CartOffCanvasBody() {
+  const { total, cartItems } = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
   return (
     <div className="cart">
       <div
-        style={{ maxHeight: "460px", overflowY: "auto", overflowX: "hidden" }}
+        style={{ height: "67vh", overflowY: "auto", overflowX: "hidden" }}
         className="cartitems py-4 border-top border-bottom"
       >
-        {cartItems.map((item, index) => (
-          <div key={index} className="cartitem py-3">
-            <div className="row align-items-center">
-              <div className="col-3 position-relative">
-                <img
-                  style={{ marginLeft: "2px" }}
-                  width={"100%"}
-                  src={item.productImg}
-                  alt="productImg"
-                />
-                <div
-                  style={{
-                    background: "#f7f7f7",
-                    position: "absolute",
-                    left: "15px",
-                    top: "-10px",
-                  }}
-                  className="hover-effect-circle"
-                >
-                  <i
+        {cartItems.length ? (
+          cartItems.map((item, index) => (
+            <div key={index} className="cartitem py-3">
+              <div className="row align-items-center">
+                <div className="col-3 position-relative">
+                  <img
+                    style={{ marginLeft: "2px" }}
+                    width={"100%"}
+                    src={item.productImage}
+                    alt="productImg"
+                  />
+                  <div
                     style={{
-                      fontSize: "18px",
-                      fontWeight: "bolder",
-                      cursor: "pointer",
+                      background: "#f7f7f7",
+                      position: "absolute",
+                      left: "15px",
+                      top: "-10px",
                     }}
-                    className="bi bi-x px-1 d-block rounded-circle"
-                  ></i>
+                    className="hover-effect-circle"
+                    onClick={() => dispatch(removeItem(item.id))}
+                  >
+                    <i
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bolder",
+                        cursor: "pointer",
+                      }}
+                      className="bi bi-x px-1 d-block rounded-circle"
+                    ></i>
+                  </div>
+                </div>
+                <div className="col-5">
+                  <ProductContentStar {...item} fontSize="14px" />
+                  <ProductContentTitle
+                    fontSize="14px"
+                    {...item}
+                    className="py-1"
+                  />
+                  <ProductContentPrice {...item} />
+                </div>
+                <div className="col-4">
+                  <ProductContentCounter {...item} />
                 </div>
               </div>
-              <div className="col-5">
-                <ProductContentStar {...item} fontSize="14px" />
-                <ProductContentTitle
-                  fontSize="14px"
-                  {...item}
-                  className="py-1"
-                />
-                <ProductContentPrice {...item} />
-              </div>
-              <div className="col-4">
-                <ProductContentCounter />
-              </div>
             </div>
+          ))
+        ) : (
+          <div>
+            <h3 className="fw-bold text-center" style={{ color: "orange" }}>
+              Your Cart is Currently Empty
+            </h3>
           </div>
-        ))}
+        )}
       </div>
       <div className="cartsubtotal mt-3">
         <div className="d-flex align-items-center justify-content-between mb-4">
           <h2 className="fs-4">Subtotal:</h2>
-          <h2 className="fs-4">$625.37</h2>
+          <h2 className="fs-4">${total.toFixed(2)}</h2>
         </div>
         <div className="d-flex align-items-center justify-content-between gap-4">
-          <button style={{width:"100%"}} className="btn btn-primary py-3">View Cart</button>
-          <button style={{background:"#ff4b7e",color:"white",width:"100%"}} className="btn py-3">Checkout</button>
+          <button
+            style={{ width: "100%" }}
+            className="btn btn-primary py-3 fw-bold"
+            onClick={() => dispatch(clearCart())}
+          >
+            Clear Cart
+          </button>
+          <button
+            style={{ background: "#ff4b7e", color: "white", width: "100%" }}
+            className="btn py-3 fw-bold"
+          >
+            Checkout
+          </button>
         </div>
       </div>
     </div>
   );
 }
-
-const cartItems = [
-  {
-    productImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-01.png",
-    amount: 15,
-    star: 4.5,
-    reviewNo: 18,
-    title: "Bass Meets Clarity",
-    previousPrice: 40,
-    newPrice: 33,
-  },
-  {
-    productImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-02.png",
-    amount: 5,
-    star: 3,
-    reviewNo: 5,
-    title: "Best KeyBoard",
-    previousPrice: 90,
-    newPrice: 55,
-  },
-  {
-    productImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-03.png",
-    amount: 22,
-    star: 5,
-    reviewNo: 23,
-    title: "HD CC Camera",
-    newPrice: 200,
-  },
-  {
-    productImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-01.png",
-    amount: 15,
-    star: 4.5,
-    reviewNo: 18,
-    title: "Bass Meets Clarity",
-    previousPrice: 40,
-    newPrice: 33,
-  },
-  {
-    productImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-02.png",
-    amount: 5,
-    star: 3,
-    reviewNo: 5,
-    title: "Best KeyBoard",
-    previousPrice: 90,
-    newPrice: 55,
-  },
-  {
-    productImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-03.png",
-    amount: 22,
-    star: 5,
-    reviewNo: 23,
-    title: "HD CC Camera",
-    newPrice: 200,
-  },
-];

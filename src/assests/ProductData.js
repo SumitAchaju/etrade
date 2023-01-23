@@ -1,4 +1,4 @@
-const ProductData = [
+let ProductData = [
   {
     id: 1,
     title: "Level 20 RGB Cherry",
@@ -1032,5 +1032,6 @@ const ProductData = [
     ],
   },
 ];
+ProductData.forEach(item=>item.amount=1)
 
 export default ProductData;

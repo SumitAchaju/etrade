@@ -4,7 +4,7 @@ import "./scss/ProductPreview.style.scss";
 import ProductDetail from "../productsingle/ProductDetail";
 
 export default function ProductPreview() {
-  const { productItem } = useSelector((store) => store.productPreview);
+  const { productItem,itemAmount } = useSelector((store) => store.productPreview);
   return (
     <>
       {/* Modal */}
@@ -18,7 +18,7 @@ export default function ProductPreview() {
         <div className="modal-preview-item modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content position-relative">
             <div className="modal-body">
-              <ProductDetail {...productItem}/>
+              <ProductDetail {...productItem} itemAmount={itemAmount}/>
             </div>
             <div
               className="modal-dismiss-cross position-absolute"

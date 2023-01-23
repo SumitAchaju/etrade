@@ -1,8 +1,12 @@
 import React from "react";
 import "./scss/ProductContent.style.scss";
-import { useDispatch } from "react-redux";
-import { previewItem } from "../../store/features/ProductPreviewSlice";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  decreaseCount,
+  increaseCount,
+  previewItem,
+} from "../../store/features/ProductPreviewSlice";
+import { toggleItemsAmount, addItem, removeItem } from "../../store/features/CartSlice";
 
 export default function ProductContentTitle(props) {
   return (
@@ -89,12 +93,6 @@ export function ProductContentStar(props) {
 }
 
 export function ProductContentSelectColor(props) {
-  function selectColor(event) {
-    const prevColor = document.querySelector(".selected");
-    prevColor.classList.remove("selected");
-    event.target.classList.add("selected");
-  }
-
   return (
     <>
       <div
@@ -107,7 +105,6 @@ export function ProductContentSelectColor(props) {
             className={`${
               index === 0 ? "selected" : ""
             } rounded-circle color d-block`}
-            onClick={(event) => selectColor(event)}
           ></span>
         ))}
       </div>
@@ -116,14 +113,26 @@ export function ProductContentSelectColor(props) {
 }
 
 export function ProductContentAddCart(props) {
+  const { cartItems } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
+  const isInCart = cartItems.find((item) => item.id === props.id)
+    ? true
+    : false;
+  const addCartItem = ()=>dispatch(addItem({data:props.id}))
+  const removeCartItem = ()=>dispatch(removeItem(props.id))
   return (
     <>
       <div
         className={`product-add-cart gap-2 d-flex align-items-center ${props?.className}`}
       >
         <i className="bi bi-heart rounded"></i>
-        <button className="btn">Add to Cart</button>
+        <button
+          style={{ background: isInCart ? "#139e38" : null }}
+          className="btn"
+          onClick={isInCart?removeCartItem:addCartItem}
+        >
+          {isInCart ? "Remove Item" : "Add to Cart"}
+        </button>
         <i
           onClick={() => dispatch(previewItem(props.id))}
           data-bs-toggle="modal"
@@ -135,19 +144,30 @@ export function ProductContentAddCart(props) {
   );
 }
 
-export function ProductContentCounter() {
-  const [amount, setAmount] = useState(1);
+export function ProductContentCounter(props) {
+  const dispatch = useDispatch();
+
+  const { cartItems } = useSelector((store) => store.cart);
+  const { itemAmount } = props;
+
+  const isInCart = cartItems.find((item) => item.id === props.id);
+  const isInCartAmount = isInCart ? isInCart.amount : itemAmount;
+
   function decreaseAmount() {
-    if (amount <= 1) {
+    if (isInCartAmount <= 1) {
       return;
     }
-    setAmount((prev) => prev - 1);
+    if (isInCart)
+      dispatch(toggleItemsAmount({ id: isInCart.id, type: "decrease" }));
+    else dispatch(decreaseCount());
   }
   function increaseAmount() {
-    if (amount >= 10) {
+    if (isInCartAmount >= 10) {
       return;
     }
-    setAmount((prev) => prev + 1);
+    if (isInCart)
+      dispatch(toggleItemsAmount({ id: isInCart.id, type: "increase" }));
+    else dispatch(increaseCount());
   }
   return (
     <>
@@ -163,7 +183,7 @@ export function ProductContentCounter() {
             className="bi bi-dash px-2 py-1 d-block rounded-circle"
           ></i>
         </div>
-        <div className="fw-bold">{amount}</div>
+        <div className="fw-bold">{isInCartAmount}</div>
         <div style={{ background: "#f7f7f7" }} className="hover-effect-circle">
           <i
             style={{
@@ -179,7 +199,6 @@ export function ProductContentCounter() {
     </>
   );
 }
-
 
 export function SocialIcons() {
   return (

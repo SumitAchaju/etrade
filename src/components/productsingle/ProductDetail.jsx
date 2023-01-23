@@ -9,8 +9,18 @@ import {
 } from "../productlist/ProductContent";
 
 import { motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, removeItem } from "../../store/features/CartSlice";
 
 export default function ProductDetail(props) {
+  const { cartItems } = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
+  const isInCart = cartItems.find((item) => item.id === props.id)
+    ? true
+    : false;
+  const addCartItem = () =>
+    dispatch(addItem({ data: props.id, amount: props.itemAmount }));
+  const removeCartItem = () => dispatch(removeItem(props.id));
   return (
     <>
       <div className="row">
@@ -33,7 +43,7 @@ export default function ProductDetail(props) {
           </div>
           <div className="row align-items-center mt-4">
             <div className="col-4 col-lg-3">
-              <ProductContentCounter />
+              <ProductContentCounter {...props} />
             </div>
             <div className="col-8 col-lg-9">
               <motion.div
@@ -43,10 +53,14 @@ export default function ProductDetail(props) {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <button
-                  style={{ background: "#ff4b7e", color: "white" }}
+                  style={{
+                    background: isInCart ? "#139e38" : "#ff4b7e",
+                    color: "white",
+                  }}
+                  onClick={isInCart ? removeCartItem : addCartItem}
                   className="btn px-3 py-2 fw-bold"
                 >
-                  Add to Cart
+                  {isInCart ? "Remove Item" : "Add to Cart"}
                 </button>
               </motion.div>
             </div>

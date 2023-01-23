@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Router";
-import { Provider } from "react-redux";
-import { Store } from "./store/Store";
+import { useDispatch, useSelector } from "react-redux";
+import { calculateTotal } from "./store/features/CartSlice";
 
 function App() {
+  const dispatch = useDispatch()
+  const {cartItems} = useSelector(store=>store.cart)
+  useEffect(()=>{
+    dispatch(calculateTotal())
+  },[cartItems])
   return (
     <>
-    <Provider store={Store}>
     <RouterProvider router={router} />
-    </Provider>
     </>
   );
 }

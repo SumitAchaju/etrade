@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./scss/Navigation.style.scss";
-import OffCanvas, { categoryOffCanvasBody, menuOffCanvasBody } from "../offcanvas/OffCanvas";
-import { cartOffCanvasBody } from "../offcanvas/OffCanvas";
+import OffCanvas, { CategoryOffCanvasBody, MenuOffCanvasBody,CartOffCanvasBody } from "../offcanvas/OffCanvas";
+import { useSelector } from "react-redux";
 
 export default function Navigation() {
+  const {amount} = useSelector(store=>store.cart)
   return (
     <>
       <nav className="navlink-home-container">
@@ -42,7 +43,7 @@ export default function Navigation() {
                   aria-controls="endcart"
                   to=""
                 >
-                  <i className="bi bi-cart" value="3"></i>
+                  <i className="bi bi-cart" value={amount}></i>
                 </Link>
                 <Link className="hover-effect-circle" to=" ">
                   <i className="bi bi-person"></i>
@@ -63,20 +64,20 @@ export default function Navigation() {
       </nav>
       <OffCanvas
         width="250px"
-        offCanvasBody={menuOffCanvasBody}
+        offCanvasBody={MenuOffCanvasBody}
         canvasId="endmenu"
         align="end"
         title="Menu"
       />
       <OffCanvas
         width="250px"
-        offCanvasBody={categoryOffCanvasBody}
+        offCanvasBody={CategoryOffCanvasBody}
         canvasId="startcategory"
         align="start"
         title="Categories"
       />
       <OffCanvas
-        offCanvasBody={cartOffCanvasBody}
+        offCanvasBody={CartOffCanvasBody}
         canvasId="endcart"
         align="end"
         title="CART ITEMS"

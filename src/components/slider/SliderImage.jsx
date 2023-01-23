@@ -15,7 +15,7 @@ export default function SliderImage(props) {
           />
           {imgStyle ? null : (
             <div className="hover-action-product">
-              <ProductContentAddCart id={props.id} />
+              <ProductContentAddCart {...props} />
             </div>
           )}
         </div>
