@@ -11,6 +11,7 @@ import HomeFeedBack from "./feedback/HomeFeedBack";
 import NewArrival from "./homesales/NewArrival";
 import HomeNewsLetter, { newsLetterData } from "./feedback/HomeNewsLetter";
 import Footer from "../../components/footer/Footer";
+import ProductPreview from "../../components/productlist/ProductPreview";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <NewArrival/>
       <HomeNewsLetter {...newsLetterData} />
       <Footer/>
+      <ProductPreview/>
     </>
   );
 }

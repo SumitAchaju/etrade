@@ -11,7 +11,7 @@ export default function ProductList(props) {
             <div key={index} className="product-list-item col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                 
               <SliderImage {...item} />
-              {item.color ? (
+              {item.view==="color" ? (
                 <SliderContent2 {...item} />
               ) : (
                 <SliderContent1 {...item} />

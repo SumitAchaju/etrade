@@ -1,12 +1,18 @@
 import React from "react";
 import "./scss/ProductContent.style.scss";
+import { useDispatch } from "react-redux";
+import { previewItem } from "../../store/features/ProductPreviewSlice";
+import { useState } from "react";
 
 export default function ProductContentTitle(props) {
   return (
     <>
       <p
         className={`fw-bold ${props?.className}`}
-        style={{fontSize: props.fontSize?props.fontSize:"17px", color: "#757575" }}
+        style={{
+          fontSize: props.fontSize ? props.fontSize : "17px",
+          color: "#757575",
+        }}
       >
         {props.title}
       </p>
@@ -19,7 +25,11 @@ export function ProductContentPrice(props) {
     <>
       <div className={`price d-flex gap-2 ${props?.className}`}>
         <span
-          style={{ color: "#303030", fontSize: "18px", fontWeight: "bold" }}
+          style={{
+            color: "#303030",
+            fontSize: props.fontSize ? props.fontSize : "18px",
+            fontWeight: "bold",
+          }}
         >
           ${props.newPrice}
         </span>
@@ -28,7 +38,7 @@ export function ProductContentPrice(props) {
             style={{
               color: "#c2c2c2",
               textDecoration: "line-through #c2c2c2",
-              fontSize: "18px",
+              fontSize: props.fontSize ? props.fontSize : "18px",
               fontWeight: "bold",
             }}
           >
@@ -52,17 +62,20 @@ export function ProductContentStar(props) {
           {fullStar.map((num) => (
             <i
               key={num}
-              style={{ color: "#FFDC60",fontSize:props?.fontSize }}
+              style={{ color: "#FFDC60", fontSize: props?.fontSize }}
               className="bi bi-star-fill"
             ></i>
           ))}
           {halfStar ? (
-            <i style={{ color: "#FFDC60",fontSize:props?.fontSize }} className="bi bi-star-half"></i>
+            <i
+              style={{ color: "#FFDC60", fontSize: props?.fontSize }}
+              className="bi bi-star-half"
+            ></i>
           ) : null}
           {emptyStar.map((num) => (
             <i
               key={num}
-              style={{ color: "#FFDC60",fontSize:props?.fontSize }}
+              style={{ color: "#FFDC60", fontSize: props?.fontSize }}
               className="bi bi-star"
             ></i>
           ))}
@@ -103,6 +116,7 @@ export function ProductContentSelectColor(props) {
 }
 
 export function ProductContentAddCart(props) {
+  const dispatch = useDispatch();
   return (
     <>
       <div
@@ -110,7 +124,85 @@ export function ProductContentAddCart(props) {
       >
         <i className="bi bi-heart rounded"></i>
         <button className="btn">Add to Cart</button>
-        <i className="bi bi-eye rounded"></i>
+        <i
+          onClick={() => dispatch(previewItem(props.id))}
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          className="bi bi-eye rounded"
+        ></i>
+      </div>
+    </>
+  );
+}
+
+export function ProductContentCounter() {
+  const [amount, setAmount] = useState(1);
+  function decreaseAmount() {
+    if (amount <= 1) {
+      return;
+    }
+    setAmount((prev) => prev - 1);
+  }
+  function increaseAmount() {
+    if (amount >= 10) {
+      return;
+    }
+    setAmount((prev) => prev + 1);
+  }
+  return (
+    <>
+      <div className="d-flex align-items-center gap-2">
+        <div style={{ background: "#f7f7f7" }} className="hover-effect-circle">
+          <i
+            style={{
+              fontSize: "18px",
+              fontWeight: "bolder",
+              cursor: "pointer",
+            }}
+            onClick={decreaseAmount}
+            className="bi bi-dash px-2 py-1 d-block rounded-circle"
+          ></i>
+        </div>
+        <div className="fw-bold">{amount}</div>
+        <div style={{ background: "#f7f7f7" }} className="hover-effect-circle">
+          <i
+            style={{
+              fontSize: "18px",
+              fontWeight: "bolder",
+              cursor: "pointer",
+            }}
+            onClick={increaseAmount}
+            className="bi bi-plus px-2 py-1 d-block rounded-circle"
+          ></i>
+        </div>
+      </div>
+    </>
+  );
+}
+
+
+export function SocialIcons() {
+  return (
+    <>
+      <div
+        style={{ color: "gray" }}
+        className="footerbottomicons justify-content-center justify-content-lg-start mb-1 d-flex align-items-center gap-1"
+      >
+        <div className="hover-effect-circle">
+          <i className="bi bi-facebook d-block"></i>
+        </div>
+        <div className="hover-effect-circle">
+          <i className="bi bi-instagram d-block"></i>
+        </div>
+        <div className="hover-effect-circle">
+          <i className="bi bi-twitter d-block"></i>
+        </div>
+        <div className="hover-effect-circle">
+          <i className="bi bi-linkedin d-block"></i>
+        </div>
+        <div className="hover-effect-circle">
+          <i className="bi bi-discord d-block"></i>
+        </div>
       </div>
     </>
   );

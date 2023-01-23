@@ -73,7 +73,7 @@ export function SliderContent3(props) {
         />
       </div>
       <div className="my-3">
-        <ProductContentAddCart className="justify-content-center" />
+        <ProductContentAddCart id={props.id} className="justify-content-center" />
       </div>
     </>
   );

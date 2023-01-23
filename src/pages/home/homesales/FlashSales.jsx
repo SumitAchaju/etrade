@@ -6,6 +6,7 @@ import Slider, { breakpoints } from "../../../components/slider/Slider";
 import SliderTitle from "../../../components/slider/SliderTitle";
 import SliderImage from "../../../components/slider/SliderImage";
 import SliderContent from "../../../components/slider/SliderContent";
+import  ProductData  from "../../../assests/ProductData";
 
 export default function FlashSales() {
   const navigationNextRef = useRef(null);
@@ -80,66 +81,4 @@ function SlideCard(props) {
   );
 }
 
-const slideData = [
-  {
-    title: "Level 20 RGB Cherry",
-    previousPrice: 80,
-    newPrice: 60,
-    discount: 20,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-02.png",
-  },
-  {
-    title: "Sky Blue T-shirt",
-    previousPrice: 50,
-    newPrice: 40,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-19.png",
-  },
-  {
-    title: "Women's Style Hat",
-    previousPrice: 30,
-    newPrice: 24,
-    discount: 50,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-6.png",
-  },
-  {
-    title: "Diamond Ring",
-    previousPrice: 50,
-    newPrice: 40,
-    discount: 30,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/jewellery/product-4.png",
-  },
-  {
-    title: "Neue Sofa Chair",
-    previousPrice: 60,
-    newPrice: 50,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-5.png",
-  },
-  {
-    title: "3D™ wireless headset",
-    previousPrice: 30,
-    newPrice: 24,
-    discount: 50,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-04.png",
-  },
-  {
-    title: "Comfortale Chair",
-    previousPrice: 80,
-    newPrice: 60,
-    discount: 25,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-4.png",
-  },
-  {
-    title: "Leather Hand Bag",
-    previousPrice: 100,
-    newPrice: 75,
-    productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-3.png",
-  },
-];
+const slideData = ProductData.slice(0,8)

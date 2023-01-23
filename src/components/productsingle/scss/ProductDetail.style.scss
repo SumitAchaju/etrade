@@ -1,0 +1,13 @@
+.addtowishlist{
+    color: rgb(58, 58, 58);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: .3s;
+    &:hover{
+        color: #ff4b7e;
+    }
+    span{
+        display: block;
+    }
+}

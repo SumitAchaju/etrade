@@ -1,4 +1,5 @@
 import React from "react";
+import { SocialIcons } from "../productlist/ProductContent";
 
 export default function FooterBottom() {
   return (
@@ -6,29 +7,13 @@ export default function FooterBottom() {
       <div className="container">
         <div className="row py-3 align-items-center">
           <div className="col-12 col-lg-4">
-            <div
-              style={{ color: "gray" }}
-              className="footerbottomicons justify-content-center justify-content-lg-start mb-1 d-flex align-items-center gap-1"
-            >
-              <div className="hover-effect-circle">
-                <i className="bi bi-facebook d-block"></i>
-              </div>
-              <div className="hover-effect-circle">
-                <i className="bi bi-instagram d-block"></i>
-              </div>
-              <div className="hover-effect-circle">
-                <i className="bi bi-twitter d-block"></i>
-              </div>
-              <div className="hover-effect-circle">
-                <i className="bi bi-linkedin d-block"></i>
-              </div>
-              <div className="hover-effect-circle">
-                <i className="bi bi-discord d-block"></i>
-              </div>
-            </div>
+            <SocialIcons />
           </div>
           <div className="col-12 col-lg-4 mb-2 pb-1">
-            <p className="fw-bold text-center" style={{ color: "gray", fontSize: "14px" }}>
+            <p
+              className="fw-bold text-center"
+              style={{ color: "gray", fontSize: "14px" }}
+            >
               © 2022. All rights reserved by Axilthemes.
             </p>
           </div>
