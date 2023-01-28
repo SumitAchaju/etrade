@@ -1,15 +1,15 @@
 .navlinks-home {
-    .active-navlink{
-        &::before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: rgb(43, 43, 43);
+  .active-navlink {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: rgb(43, 43, 43);
     }
-    }
+  }
   a {
     color: rgb(104, 104, 104);
     font-size: 16px;
@@ -17,88 +17,110 @@
     position: relative;
     display: inline-block;
     &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: gray;
-        transform-origin: bottom left;
-        transition: transform 0.25s ease-out;
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: gray;
+      transform-origin: bottom left;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-}
 }
 .home-navbar-icons {
   div {
-    a{
+    a {
       padding: 5px 10px;
     }
     i {
       color: rgb(79, 79, 79);
       font-size: 22px;
       font-weight: bold;
-      &[value]:after{
-        content:attr(value);
-        font-size:12px;
+      &[value]:after {
+        content: attr(value);
+        font-size: 12px;
         color: #fff;
         background: rgb(14, 154, 209);
-        border: 2.5px solid white ;
-        border-radius:999px;
+        border: 2.5px solid white;
+        border-radius: 999px;
         padding: 0 5px;
-        position:absolute;
+        position: absolute;
         font-family: Arial, Helvetica, sans-serif;
-        right:-8px;
-        top:-8px;
+        right: -8px;
+        top: -8px;
         z-index: 2;
-        opacity:0.9;
-    }
+        opacity: 0.9;
+      }
     }
   }
 }
-#offcanvasRightMenu{
+#offcanvasRightMenu {
   width: 250px !important;
 }
-#offcanvasLeftCategory{
+#offcanvasLeftCategory {
   width: 250px !important;
 }
-.offcanvas-menu{
-  li{
+.offcanvas-menu {
+  li {
     line-height: 50px;
     border-bottom: 1px solid rgb(233, 233, 233);
-    a{
+    a {
       color: gray;
       font-size: 18px;
       font-weight: bold;
       display: block;
       text-align: center;
-      transition: .3s;
-      &:hover{
+      transition: 0.3s;
+      &:hover {
         color: white;
         background-color: #ff4b7e;
       }
     }
   }
 }
-.offcanvas-menu-search-icon{
+.offcanvas-menu-search-icon {
   padding: 4px 9px;
   border-radius: 50%;
   background-color: rgb(244, 244, 244);
   color: gray;
-  transition: .3s;
+  transition: 0.3s;
   font-size: 17px;
   right: 5px;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: #ff4b7e;
     color: white;
   }
 }
-.navlink-home-container{
-  background-color: #F7F7F7;
+.navlink-home-container {
+  background-color: #f7f7f7;
+}
+.scrolled {
+  position: sticky;
+  top: 0;
+  display: block !important;
+  z-index: 999;
+}
+
+.displayNone {
+  display: none;
+  padding: 15px 0;
+  background-color: white !important;
+  box-shadow: 10px 10px 20px rgba($color: #000000, $alpha: 0.1);
+  animation: dropdownNavbarAnimation 0.5s;
+}
+@keyframes dropdownNavbarAnimation {
+  from {
+    transform: translateY(-250px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }

@@ -6,7 +6,7 @@ import Slider, { breakpoints } from "../../../components/slider/Slider";
 import SliderTitle from "../../../components/slider/SliderTitle";
 import SliderImage from "../../../components/slider/SliderImage";
 import SliderContent from "../../../components/slider/SliderContent";
-import  ProductData  from "../../../assests/ProductData";
+import ProductData from "../../../assests/ProductData";
 
 export default function FlashSales() {
   const navigationNextRef = useRef(null);
@@ -26,18 +26,10 @@ export default function FlashSales() {
           <SliderTitle
             title="Flash Sales"
             timer={{
-              spanStyle: {
-                background: "#f7f7f7",
-                fontSize: "14px",
-                fontWeight: "bold",
-                color: "gray",
-                padding: "20px",
-              },
-              spanContent: "00",
-              iconStyle: {
-                fontSize: "12px",
-                color: "gray",
-              },
+              fontSize: "15px",
+              deadLine: "2023-9-4",
+              area: "60px",
+              background: "#f7f7f7",
             }}
             navigationNextRef={navigationNextRef}
             navigationPrevRef={navigationPrevRef}
@@ -81,4 +73,4 @@ function SlideCard(props) {
   );
 }
 
-const slideData = ProductData.slice(0,8)
+const slideData = ProductData.slice(0, 8);

@@ -1,26 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./scss/Navigation.style.scss";
-import OffCanvas, { CategoryOffCanvasBody, MenuOffCanvasBody,CartOffCanvasBody } from "../offcanvas/OffCanvas";
+import OffCanvas, {
+  CategoryOffCanvasBody,
+  MenuOffCanvasBody,
+  CartOffCanvasBody,
+} from "../offcanvas/OffCanvas";
 import { useSelector } from "react-redux";
 
 export default function Navigation() {
-  const {amount} = useSelector(store=>store.cart)
+  const { amount } = useSelector((store) => store.cart);
+  let classList = ["navlink-home-container"];
+  const [scrolled, setScrolled] = useState(false);
+
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 400) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  if (scrolled) {
+    classList.push("scrolled");
+    classList.push("displayNone");
+  }
+  
   return (
     <>
-      <nav className="navlink-home-container">
+      <nav className={classList.join(" ")}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-6 col-md-5 col-xl-2 col-lg-3 col-sm-6">
-              <button
-                className="btn btn-primary gap-2 justify-content-start d-flex align-items-center py-3 rounded px-5 w-100"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#startcategory"
-                aria-controls="startcategory"
-              >
-                <i className="bi bi-list"></i>
-                <div>Categories</div>
-              </button>
+              {scrolled ? (
+                <Link to="/">
+                  <img
+                    src="https://new.axilthemes.com/demo/template/etrade/assets/images/logo/logo.png"
+                    alt="img"
+                  />
+                </Link>
+              ) : (
+                <button
+                  className="btn btn-primary gap-2 justify-content-start d-flex align-items-center py-3 rounded px-5 w-100"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#startcategory"
+                  aria-controls="startcategory"
+                >
+                  <i className="bi bi-list"></i>
+                  <div>Categories</div>
+                </button>
+              )}
             </div>
             <div className="col-lg-8 d-md-none d-lg-block d-none">
               <div className="d-flex align-items-center gap-5 ms-5 navlinks-home">
@@ -150,5 +185,3 @@ export const categoriesData = [
     img: `${imglink}/cat-08.png`,
   },
 ];
-
-

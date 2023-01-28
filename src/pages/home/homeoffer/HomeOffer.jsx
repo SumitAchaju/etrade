@@ -68,17 +68,9 @@ export const homeOfferData = {
   img: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png",
   title: "Enhance Your Music Experience",
   timer: {
-    spanStyle: {
-      background: "white",
-      fontSize: "18px",
-      fontWeight: "bold",
-      color: "black",
-      padding: "25px",
-    },
-    spanContent: "00",
-    iconStyle: {
-      fontSize: "12px",
-      color: "gray",
-    },
-  },
+    fontSize: "18px",
+    deadLine: "2023-2-25",
+    area: "70px",
+    background: "white",
+  }
 };

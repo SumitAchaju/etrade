@@ -10,7 +10,7 @@ function App() {
   const { cartItems } = useSelector((store) => store.cart);
   useEffect(() => {
     dispatch(calculateTotal());
-  }, [cartItems]);
+  }, [cartItems,dispatch]);
   return (
     <>
       <RouterProvider router={router} />
