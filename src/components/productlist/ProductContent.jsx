@@ -7,6 +7,7 @@ import {
   previewItem,
 } from "../../store/features/ProductPreviewSlice";
 import { toggleItemsAmount, addItem, removeItem } from "../../store/features/CartSlice";
+import { cartToastAdd, cartToastRemove } from "../toast/Toast";
 
 export default function ProductContentTitle(props) {
   return (
@@ -118,8 +119,12 @@ export function ProductContentAddCart(props) {
   const isInCart = cartItems.find((item) => item.id === props.id)
     ? true
     : false;
-  const addCartItem = ()=>dispatch(addItem({data:props.id}))
-  const removeCartItem = ()=>dispatch(removeItem(props.id))
+  const addCartItem = ()=>{dispatch(addItem({data:props.id}));
+  cartToastAdd();
+}
+  const removeCartItem = ()=>{dispatch(removeItem(props.id));
+  cartToastRemove();
+  }
   return (
     <>
       <div

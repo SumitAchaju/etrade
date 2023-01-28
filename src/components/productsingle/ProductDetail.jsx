@@ -11,6 +11,7 @@ import {
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem } from "../../store/features/CartSlice";
+import { cartToastAdd, cartToastRemove } from "../toast/Toast";
 
 export default function ProductDetail(props) {
   const { cartItems } = useSelector((store) => store.cart);
@@ -18,9 +19,14 @@ export default function ProductDetail(props) {
   const isInCart = cartItems.find((item) => item.id === props.id)
     ? true
     : false;
-  const addCartItem = () =>
+  const addCartItem = () => {
     dispatch(addItem({ data: props.id, amount: props.itemAmount }));
-  const removeCartItem = () => dispatch(removeItem(props.id));
+    cartToastAdd();
+  };
+  const removeCartItem = () => {
+    dispatch(removeItem(props.id));
+    cartToastRemove();
+  };
   return (
     <>
       <div className="row">

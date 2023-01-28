@@ -21,14 +21,14 @@ export default function Home() {
       <HomeBanner />
       <FlashSales />
       <BrowseByCategory />
-      <BestSellingProduct/>
-      <HomeOffer {...homeOfferData}/>
+      <BestSellingProduct />
+      <HomeOffer {...homeOfferData} />
       <ExploreProduct />
       <HomeFeedBack />
-      <NewArrival/>
+      <NewArrival />
       <HomeNewsLetter {...newsLetterData} />
-      <Footer/>
-      <ProductPreview/>
+      <Footer />
+      <ProductPreview />
     </>
   );
 }
