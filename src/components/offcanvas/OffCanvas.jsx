@@ -66,7 +66,11 @@ export function MenuOffCanvasBody() {
       <ul className="offcanvas-menu">
         {HomeNavLinks.map((item, index) => (
           <li key={`menucanvasbody${index}`}>
-            <Link to={item.route}>{item.title}</Link>
+            <Link
+              to={item.route}
+            >
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>
@@ -79,7 +83,9 @@ export function CategoryOffCanvasBody() {
     <ul className="offcanvas-menu mt-4">
       {categoriesData.map((item, index) => (
         <li key={`categorycanvasbodytitle${index}`}>
-          <Link to="">{item.title}</Link>
+          <Link to="">
+            {item.title}
+          </Link>
         </li>
       ))}
     </ul>

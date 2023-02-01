@@ -16,7 +16,7 @@ export default function Navigation() {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 400) {
+    if (offset > 200) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -124,7 +124,7 @@ export default function Navigation() {
 export const HomeNavLinks = [
   {
     title: "Home",
-    route: "",
+    route: "/",
   },
   {
     title: "About",
@@ -132,7 +132,7 @@ export const HomeNavLinks = [
   },
   {
     title: "Shop",
-    route: "",
+    route: "/shop",
   },
   {
     title: "Pages",

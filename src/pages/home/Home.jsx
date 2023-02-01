@@ -1,6 +1,4 @@
 import React from "react";
-import HeaderTop from "../../components/header/HeaderTop";
-import Navigation from "../../components/header/Navigation";
 import HomeBanner from "./banner/HomeBanner";
 import FlashSales from "./homesales/FlashSales";
 import BrowseByCategory from "./homesales/BrowseByCategory";
@@ -9,15 +7,10 @@ import HomeOffer, { homeOfferData } from "./homeoffer/HomeOffer";
 import ExploreProduct from "./homesales/ExploreProduct";
 import HomeFeedBack from "./feedback/HomeFeedBack";
 import NewArrival from "./homesales/NewArrival";
-import HomeNewsLetter, { newsLetterData } from "./feedback/HomeNewsLetter";
-import Footer from "../../components/footer/Footer";
-import ProductPreview from "../../components/productlist/ProductPreview";
 
 export default function Home() {
   return (
     <>
-      <HeaderTop />
-      <Navigation />
       <HomeBanner />
       <FlashSales />
       <BrowseByCategory />
@@ -26,9 +19,6 @@ export default function Home() {
       <ExploreProduct />
       <HomeFeedBack />
       <NewArrival />
-      <HomeNewsLetter {...newsLetterData} />
-      <Footer />
-      <ProductPreview />
     </>
   );
 }

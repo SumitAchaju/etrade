@@ -1,0 +1,16 @@
+.my-costum-breadcrumb{
+    margin-top: 15px;
+    .breadcrumb{
+        a{
+            font-size: 16px;
+            color: gray;
+        }
+    }
+    .breadcrumbsactive{
+        a{
+
+            color: #3577F0 !important;
+            font-size: 18px !important;
+        }
+    }
+}
