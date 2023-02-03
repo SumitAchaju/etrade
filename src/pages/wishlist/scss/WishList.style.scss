@@ -1,0 +1,18 @@
+.wishlist{
+    h4{
+        font-size: 22px;
+        color: gray;
+    }
+    min-height: 300px;
+    .wishlisthead{
+        background-color: #f7f7f7;
+        padding: 15px 0;
+    }
+    .wishlistbody{
+        img{
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+    }
+}

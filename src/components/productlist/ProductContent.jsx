@@ -1,26 +1,37 @@
 import React from "react";
 import "./scss/ProductContent.style.scss";
 import { useDispatch, useSelector } from "react-redux";
+import { previewItem } from "../../store/features/ProductPreviewSlice";
 import {
-  previewItem,
-} from "../../store/features/ProductPreviewSlice";
-import { toggleItemsAmount, addItem, removeItem } from "../../store/features/CartSlice";
-import { cartToastAdd, cartToastRemove } from "../toast/Toast";
+  toggleItemsAmount,
+  addItem,
+  removeItem,
+} from "../../store/features/CartSlice";
+import {
+  addWishListToast,
+  cartToastAdd,
+  cartToastRemove,
+  removeWishListToast,
+} from "../toast/Toast";
 import { Link } from "react-router-dom";
+import {
+  addWishList,
+  removeWishList,
+} from "../../store/features/WishListSlice";
 
 export default function ProductContentTitle(props) {
   return (
     <>
-    <Link to={`/product/${props.id}`}>
-      <p
-        className={`fw-bold ${props?.className}`}
-        style={{
-          fontSize: props.fontSize ? props.fontSize : "17px",
-          color: "#757575",
-        }}
-      >
-        {props.title}
-      </p>
+      <Link to={`/product/${props.id}`}>
+        <p
+          className={`fw-bold ${props?.className}`}
+          style={{
+            fontSize: props.fontSize ? props.fontSize : "17px",
+            color: "#757575",
+          }}
+        >
+          {props.title}
+        </p>
       </Link>
     </>
   );
@@ -86,12 +97,11 @@ export function ProductContentStar(props) {
             ></i>
           ))}
         </div>
-        {
-          props.reviewNo?
+        {props.reviewNo ? (
           <span
-          style={{ color: "gray", fontSize: "14px" }}
-        >{`(${props.reviewNo})`}</span>:null
-        }
+            style={{ color: "gray", fontSize: "14px" }}
+          >{`(${props.reviewNo})`}</span>
+        ) : null}
       </div>
     </>
   );
@@ -119,26 +129,46 @@ export function ProductContentSelectColor(props) {
 
 export function ProductContentAddCart(props) {
   const { cartItems } = useSelector((store) => store.cart);
+  const { wishListItem } = useSelector((store) => store.wishlist);
   const dispatch = useDispatch();
   const isInCart = cartItems.find((item) => item.id === props.id)
     ? true
     : false;
-  const addCartItem = ()=>{dispatch(addItem({data:props.id}));
-  cartToastAdd();
-}
-  const removeCartItem = ()=>{dispatch(removeItem(props.id));
-  cartToastRemove();
-  }
+  const isInWishList = wishListItem.find((item) => item.id === props.id)
+    ? true
+    : false;
+  const addCartItem = () => {
+    dispatch(addItem({ data: props.id }));
+    cartToastAdd();
+  };
+  const removeCartItem = () => {
+    dispatch(removeItem(props.id));
+    cartToastRemove();
+  };
+  const addWishListItem = () => {
+    dispatch(addWishList(props.id));
+    addWishListToast();
+  };
+  const removeWishListItem = () => {
+    dispatch(removeWishList(props.id));
+    removeWishListToast();
+  };
   return (
     <>
       <div
         className={`product-add-cart gap-2 d-flex align-items-center ${props?.className}`}
       >
-        <i className="bi bi-heart rounded"></i>
+        <i
+          className={`bi ${
+            isInWishList ? "bi-heart-fill" : "bi-heart"
+          } rounded`}
+          onClick={isInWishList ? removeWishListItem : addWishListItem}
+          style={{ color: isInWishList ? "#ff4b7e" : "gray" }}
+        ></i>
         <button
           style={{ background: isInCart ? "#139e38" : null }}
           className="btn"
-          onClick={isInCart?removeCartItem:addCartItem}
+          onClick={isInCart ? removeCartItem : addCartItem}
         >
           {isInCart ? "Remove Item" : "Add to Cart"}
         </button>
@@ -155,7 +185,7 @@ export function ProductContentAddCart(props) {
 
 export function ProductContentCounter(props) {
   const dispatch = useDispatch();
-  let {itemAmount,setItemAmount} = props;
+  let { itemAmount, setItemAmount } = props;
   const { cartItems } = useSelector((store) => store.cart);
 
   const isInCart = cartItems.find((item) => item.id === props.id);
@@ -167,7 +197,7 @@ export function ProductContentCounter(props) {
     }
     if (isInCart)
       dispatch(toggleItemsAmount({ id: isInCart.id, type: "decrease" }));
-    else setItemAmount(prev=>prev-1)
+    else setItemAmount((prev) => prev - 1);
   }
   function increaseAmount() {
     if (isInCartAmount >= 10) {
@@ -175,8 +205,7 @@ export function ProductContentCounter(props) {
     }
     if (isInCart)
       dispatch(toggleItemsAmount({ id: isInCart.id, type: "increase" }));
-    else setItemAmount(prev=>prev+1)
-
+    else setItemAmount((prev) => prev + 1);
   }
   return (
     <>

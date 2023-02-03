@@ -68,7 +68,7 @@ export default function Navigation() {
             </div>
             <div className="col-xl-2 col-lg-1 col-md-7 col-6 home-navbar-icons">
               <div className="d-flex gap-1 align-items-center justify-content-end">
-                <Link to=" " className="hover-effect-circle">
+                <Link to="/wishlist" className="hover-effect-circle">
                   <i className="bi bi-heart"></i>
                 </Link>
                 <Link

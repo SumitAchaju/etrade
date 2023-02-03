@@ -36,7 +36,7 @@ export default function BreadCrumbs({ title, link }) {
                 ))}
               </ol>
             </nav>
-            <h2 className="fs-1 fw-bold">{title}</h2>
+            <h2 className="fs-2">{title}</h2>
           </div>
           <div>
             <img

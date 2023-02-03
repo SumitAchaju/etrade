@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ProductContentStar } from "../productlist/ProductContent";
 import "./scss/ProductReview.style.scss";
 import StarRating from "./ProductRating";
-import { productReviewCommentTost } from "../toast/Toast";
+import { productReviewCommentToast } from "../toast/Toast";
 
 export default function ProductReview() {
   const [rating, setRating] = useState(0);
@@ -16,9 +16,9 @@ export default function ProductReview() {
       comment: e.target.message.value,
     };
     setComment((prev) => [...prev, newComment]);
-    productReviewCommentTost();
+    productReviewCommentToast();
   }
-  
+
   return (
     <>
       <div className="row product-review">
