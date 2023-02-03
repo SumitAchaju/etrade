@@ -11,7 +11,7 @@ export default function SliderContent(props) {
     <>
       <div className="productcontent">
         <div className="mt-4">
-          <ProductContentTitle title={props.title} className="text-center" />
+          <ProductContentTitle {...props} className="text-center" />
         </div>
         <div className="mt-2">
           <ProductContentPrice

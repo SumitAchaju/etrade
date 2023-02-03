@@ -19,12 +19,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -51,12 +51,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -84,12 +84,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -117,12 +117,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -149,12 +149,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -182,12 +182,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -215,12 +215,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -247,12 +247,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -279,12 +279,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -311,12 +311,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -342,12 +342,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -373,12 +373,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -405,12 +405,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -436,12 +436,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -468,12 +468,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -500,12 +500,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -533,12 +533,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -565,12 +565,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -597,12 +597,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -628,12 +628,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -661,12 +661,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -693,12 +693,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -726,12 +726,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -758,12 +758,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -791,12 +791,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -824,12 +824,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -856,12 +856,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -888,12 +888,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -921,12 +921,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -953,12 +953,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -986,12 +986,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",
@@ -1018,12 +1018,12 @@ let ProductData = [
     ],
     additionalInformation: [
       {
-        title: "Size",
-        value: "S,M,X,XL",
-      },
-      {
         title: "Width",
         value: '23"',
+      },
+      {
+        title: "Size",
+        value: "S,M,X,XL",
       },
       {
         title: "Weight",

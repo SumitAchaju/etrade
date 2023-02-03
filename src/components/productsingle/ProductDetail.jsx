@@ -1,6 +1,6 @@
 import { SocialIcons } from "../productlist/ProductContent";
 import "./scss/ProductDetail.style.scss";
-import React from "react";
+import React,{useState} from "react";
 import {
   ProductContentCounter,
   ProductContentPrice,
@@ -15,12 +15,13 @@ import { cartToastAdd, cartToastRemove } from "../toast/Toast";
 
 export default function ProductDetail(props) {
   const { cartItems } = useSelector((store) => store.cart);
+  const [itemAmount,setItemAmount] = useState(1);
   const dispatch = useDispatch();
   const isInCart = cartItems.find((item) => item.id === props.id)
     ? true
     : false;
   const addCartItem = () => {
-    dispatch(addItem({ data: props.id, amount: props.itemAmount }));
+    dispatch(addItem({ data: props.id, amount: itemAmount }));
     cartToastAdd();
   };
   const removeCartItem = () => {
@@ -30,10 +31,16 @@ export default function ProductDetail(props) {
   return (
     <>
       <div className="row">
-        <div className="col-12 col-md-6">
-          <img src={props?.productImage} alt="img" />
+        <div
+          className={`col-12 ${props.productShow ? "col-lg-5 col-md-6" : "col-md-6"}`}
+        >
+          <img className="w-100" src={props?.productImage} alt="img" />
         </div>
-        <div className="col-12 col-md-6 mt-2">
+        <div
+          className={`col-12 ${
+            props.productShow ? "col-lg-7 col-md-6" : "col-md-6"
+          } mt-3`}
+        >
           <ProductContentStar {...props} />
           <p>
             <strong>Avaibility:</strong> {props?.inStock} in Stock
@@ -49,7 +56,7 @@ export default function ProductDetail(props) {
           </div>
           <div className="row align-items-center mt-4">
             <div className="col-4 col-lg-3">
-              <ProductContentCounter {...props} />
+              <ProductContentCounter {...props} itemAmount={itemAmount} setItemAmount={setItemAmount} />
             </div>
             <div className="col-8 col-lg-9">
               <motion.div

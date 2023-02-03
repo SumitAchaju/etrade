@@ -2,16 +2,16 @@ import React from "react";
 import "./scss/ProductContent.style.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  decreaseCount,
-  increaseCount,
   previewItem,
 } from "../../store/features/ProductPreviewSlice";
 import { toggleItemsAmount, addItem, removeItem } from "../../store/features/CartSlice";
 import { cartToastAdd, cartToastRemove } from "../toast/Toast";
+import { Link } from "react-router-dom";
 
 export default function ProductContentTitle(props) {
   return (
     <>
+    <Link to={`/product/${props.id}`}>
       <p
         className={`fw-bold ${props?.className}`}
         style={{
@@ -21,6 +21,7 @@ export default function ProductContentTitle(props) {
       >
         {props.title}
       </p>
+      </Link>
     </>
   );
 }
@@ -85,9 +86,12 @@ export function ProductContentStar(props) {
             ></i>
           ))}
         </div>
-        <span
+        {
+          props.reviewNo?
+          <span
           style={{ color: "gray", fontSize: "14px" }}
-        >{`(${props.reviewNo})`}</span>
+        >{`(${props.reviewNo})`}</span>:null
+        }
       </div>
     </>
   );
@@ -151,9 +155,8 @@ export function ProductContentAddCart(props) {
 
 export function ProductContentCounter(props) {
   const dispatch = useDispatch();
-
+  let {itemAmount,setItemAmount} = props;
   const { cartItems } = useSelector((store) => store.cart);
-  const { itemAmount } = props;
 
   const isInCart = cartItems.find((item) => item.id === props.id);
   const isInCartAmount = isInCart ? isInCart.amount : itemAmount;
@@ -164,7 +167,7 @@ export function ProductContentCounter(props) {
     }
     if (isInCart)
       dispatch(toggleItemsAmount({ id: isInCart.id, type: "decrease" }));
-    else dispatch(decreaseCount());
+    else setItemAmount(prev=>prev-1)
   }
   function increaseAmount() {
     if (isInCartAmount >= 10) {
@@ -172,7 +175,8 @@ export function ProductContentCounter(props) {
     }
     if (isInCart)
       dispatch(toggleItemsAmount({ id: isInCart.id, type: "increase" }));
-    else dispatch(increaseCount());
+    else setItemAmount(prev=>prev+1)
+
   }
   return (
     <>

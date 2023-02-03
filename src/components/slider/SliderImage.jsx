@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./scss/SliderImage.style.scss";
 import { ProductContentAddCart } from "../productlist/ProductContent";
 
@@ -8,11 +9,13 @@ export default function SliderImage(props) {
     <>
       <div className="productimg">
         <div className={`productimgmain ${imgStyle}`}>
+        <Link to={`/product/${props.id}`}>
           <img
             className={`w-100 ${imgStyle}`}
             src={props.productImage}
             alt="img"
           />
+          </Link>
           {imgStyle ? null : (
             <div className="hover-action-product">
               <ProductContentAddCart {...props} />

@@ -6,6 +6,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: black ;
 }
 ul {
   list-style: none;
@@ -72,4 +73,32 @@ span {
       color: white !important;
     }
   }
+}
+
+.star-rating-on{
+  color: #FFDC60;
+}
+.star-rating-off{
+  color: gray;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(205, 205, 205);
+  border-radius: 99px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(193, 193, 193);
 }

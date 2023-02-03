@@ -1,0 +1,35 @@
+.product-review{
+    ::-webkit-scrollbar {
+       display: none;
+      }
+    .product-review-max-height{
+        max-height: 316.8px;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+    }
+    .review-avatar{
+        color: rgb(71, 71, 71);
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: rgb(194, 194, 194) 1px solid;
+        border-radius: 50%;
+        svg{
+            font-size: 50px;
+        }
+    }
+    h2{
+        font-size: 25px;
+    }
+    form{
+        label{
+            display: block;
+        }
+        textarea{
+            resize: none;
+        }
+    }
+}
