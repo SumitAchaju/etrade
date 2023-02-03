@@ -9,7 +9,7 @@ export default function ProductInfo(props) {
   const [show, setShow] = useState("description");
   return (
     <>
-      <div className="product-info d-flex justify-content-center align-items-center gap-5">
+      <div className="product-info d-flex justify-content-center align-items-center gap-sm-5 gap-4">
         <span
           className={show === "description" ? "product-info-active" : ""}
           onClick={() => setShow("description")}

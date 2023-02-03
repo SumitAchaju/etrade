@@ -4,7 +4,7 @@ import SliderCategory from "../../components/slider/SliderCategory";
 import SliderTitle from "../../components/slider/SliderTitle";
 import Slider, { breakpoints } from "../../components/slider/Slider";
 import SliderImage from "../../components/slider/SliderImage";
-import { SliderContent1 } from "../../components/slider/SliderContent";
+import { SliderContent1, SliderContent2 } from "../../components/slider/SliderContent";
 import ProductData from "../../assests/ProductData";
 import { useMemo } from "react";
 
@@ -69,7 +69,11 @@ function SlideCard(props) {
     <>
       <div style={{ cursor: "pointer" }} className="bestsellingproductslide">
         <SliderImage {...props} />
-        <SliderContent1 {...props} />
+        {props.view==="color" ? (
+                <SliderContent2 {...props} />
+              ) : (
+                <SliderContent1 {...props} />
+              )}
       </div>
     </>
   );

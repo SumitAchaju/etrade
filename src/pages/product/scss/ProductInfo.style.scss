@@ -8,6 +8,7 @@
         cursor: pointer;
         transition: .4s;
         position: relative;
+        white-space: nowrap;
         &::before{
             content: "";
             width: 100%;
@@ -42,6 +43,6 @@
 
 @media (max-width:576px) {
  span{
-    font-size: 16px !important;
+    font-size: 15px !important;
  }   
 }

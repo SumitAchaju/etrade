@@ -101,7 +101,7 @@ export function ProductContentSelectColor(props) {
   return (
     <>
       <div
-        className={`d-flex align-items-center gap-3 select-color ${props?.className}`}
+        className={`d-flex align-items-center gap-3 ps-2 select-color ${props?.className}`}
       >
         {props.color.map((item, index) => (
           <span
