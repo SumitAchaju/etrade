@@ -4,7 +4,7 @@ import ProductContentTitle, {
   ProductContentPrice,
   ProductContentStar,
 } from "../productlist/ProductContent";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HomeNavLinks, categoriesData } from "../header/Navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, removeItem } from "../../store/features/CartSlice";
@@ -95,6 +95,7 @@ export function CategoryOffCanvasBody() {
 export function CartOffCanvasBody() {
   const { total, cartItems } = useSelector((store) => store.cart);
   const dispatch = useDispatch();
+  const go = useNavigate();
   return (
     <div className="cart">
       <div
@@ -171,6 +172,7 @@ export function CartOffCanvasBody() {
           <button
             style={{ background: "#ff4b7e", color: "white", width: "100%" }}
             className="btn py-3 fw-bold"
+            onClick={()=>go("/checkout")}
           >
             Checkout
           </button>

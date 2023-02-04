@@ -9,5 +9,8 @@
     }
     span{
         display: block;
+        &::selection{
+            display: none;
+        }
     }
 }

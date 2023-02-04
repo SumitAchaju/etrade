@@ -1,6 +1,6 @@
 import { SocialIcons } from "../productlist/ProductContent";
 import "./scss/ProductDetail.style.scss";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import {
   ProductContentCounter,
   ProductContentPrice,
@@ -11,13 +11,26 @@ import {
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem } from "../../store/features/CartSlice";
-import { cartToastAdd, cartToastRemove } from "../toast/Toast";
+import {
+  addWishListToast,
+  cartToastAdd,
+  cartToastRemove,
+  removeWishListToast,
+} from "../toast/Toast";
+import {
+  addWishList,
+  removeWishList,
+} from "../../store/features/WishListSlice";
 
 export default function ProductDetail(props) {
   const { cartItems } = useSelector((store) => store.cart);
-  const [itemAmount,setItemAmount] = useState(1);
+  const { wishListItem } = useSelector((store) => store.wishlist);
+  const [itemAmount, setItemAmount] = useState(1);
   const dispatch = useDispatch();
   const isInCart = cartItems.find((item) => item.id === props.id)
+    ? true
+    : false;
+  const isInWishList = wishListItem.find((item) => item.id === props.id)
     ? true
     : false;
   const addCartItem = () => {
@@ -28,11 +41,21 @@ export default function ProductDetail(props) {
     dispatch(removeItem(props.id));
     cartToastRemove();
   };
+  const addWishListItem = () => {
+    dispatch(addWishList(props.id));
+    addWishListToast();
+  };
+  const removeWishListItem = () => {
+    dispatch(removeWishList(props.id));
+    removeWishListToast();
+  };
   return (
     <>
       <div className="row">
         <div
-          className={`col-12 ${props.productShow ? "col-lg-5 col-md-6" : "col-md-6"}`}
+          className={`col-12 ${
+            props.productShow ? "col-lg-5 col-md-6" : "col-md-6"
+          }`}
         >
           <img className="w-100" src={props?.productImage} alt="img" />
         </div>
@@ -56,7 +79,11 @@ export default function ProductDetail(props) {
           </div>
           <div className="row align-items-center mt-4">
             <div className="col-4 col-lg-3">
-              <ProductContentCounter {...props} itemAmount={itemAmount} setItemAmount={setItemAmount} />
+              <ProductContentCounter
+                {...props}
+                itemAmount={itemAmount}
+                setItemAmount={setItemAmount}
+              />
             </div>
             <div className="col-8 col-lg-9">
               <motion.div
@@ -80,8 +107,17 @@ export default function ProductDetail(props) {
           </div>
           <div className="d-flex align-items-center gap-3 mt-3">
             <div className="d-flex align-items-center gap-1 addtowishlist">
-              <i className="bi bi-heart d-block"></i>
-              <span>Add to Wishlist</span>
+              <i
+                className={`bi ${
+                  isInWishList ? "bi-heart-fill" : "bi-heart"
+                } rounded`}
+                style={{ color: isInWishList ? "#ff4b7e" : "gray" }}
+              ></i>
+              <span
+                onClick={isInWishList ? removeWishListItem : addWishListItem}
+              >
+                {isInWishList ? "Remove from Wishlist" : "Add to Wishlist"}
+              </span>
             </div>
             <div className="d-flex align-items-center gap-1 addtowishlist">
               <i className="bi bi-braces d-block"></i>

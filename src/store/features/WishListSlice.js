@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import ProductData from "../../assests/ProductData";
 
 const initialState = {
-  wishListItem: ProductData.slice(5, 8),
+  wishListItem: shuffle([...ProductData]).slice(5, 8),
 };
 
 const wishListSlice = createSlice({
@@ -24,3 +24,7 @@ const wishListSlice = createSlice({
 export default wishListSlice.reducer;
 
 export const { addWishList, removeWishList } = wishListSlice.actions;
+
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
