@@ -8,7 +8,7 @@
         background-color: white;
         font-size: 14px;
         padding: 0 8px;
-        color: rgb(133, 133, 133);
+        color: rgb(85, 85, 85);
         font-weight: 500;
         span{
             color: red;
@@ -19,7 +19,7 @@
         resize: none;
     }
     input::placeholder,textarea::placeholder{
-        color: rgb(192, 192, 192) !important;
+        color: rgb(158, 158, 158) !important;
         font-weight: 200 !important;
     }
 }
