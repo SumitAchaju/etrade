@@ -29,6 +29,8 @@ export default function ProductContentTitle(props) {
             fontSize: props.fontSize ? props.fontSize : "17px",
             color: "#757575",
           }}
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
         >
           {props.title}
         </p>

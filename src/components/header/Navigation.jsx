@@ -128,7 +128,7 @@ export const HomeNavLinks = [
   },
   {
     title: "About",
-    route: "",
+    route: "/about",
   },
   {
     title: "Shop",
@@ -136,10 +136,6 @@ export const HomeNavLinks = [
   },
   {
     title: "Pages",
-    route: "",
-  },
-  {
-    title: "Blog",
     route: "",
   },
   {

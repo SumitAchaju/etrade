@@ -66,10 +66,10 @@ export function MenuOffCanvasBody() {
       <ul className="offcanvas-menu">
         {HomeNavLinks.map((item, index) => (
           <li key={`menucanvasbody${index}`}>
-            <Link
-              to={item.route}
-            >
-              {item.title}
+            <Link to={item.route}>
+              <p data-bs-dismiss="offcanvas" aria-label="Close">
+                {item.title}
+              </p>
             </Link>
           </li>
         ))}
@@ -83,7 +83,7 @@ export function CategoryOffCanvasBody() {
     <ul className="offcanvas-menu mt-4">
       {categoriesData.map((item, index) => (
         <li key={`categorycanvasbodytitle${index}`}>
-          <Link to="">
+          <Link to="" data-bs-dismiss="offcanvas" aria-label="Close">
             {item.title}
           </Link>
         </li>
@@ -107,12 +107,16 @@ export function CartOffCanvasBody() {
             <div key={index} className="cartitem py-3">
               <div className="row align-items-center">
                 <div className="col-3 position-relative">
-                  <img
-                    style={{ marginLeft: "2px" }}
-                    width={"100%"}
-                    src={item.productImage}
-                    alt="productImg"
-                  />
+                  <Link to={`product/${item.id}`}>
+                    <img
+                      style={{ marginLeft: "2px" }}
+                      width={"100%"}
+                      src={item.productImage}
+                      alt="productImg"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    />
+                  </Link>
                   <div
                     style={{
                       background: "#f7f7f7",
@@ -172,9 +176,11 @@ export function CartOffCanvasBody() {
           <button
             style={{ background: "#ff4b7e", color: "white", width: "100%" }}
             className="btn py-3 fw-bold"
-            onClick={()=>go("/checkout")}
+            onClick={() => go("/checkout")}
           >
-            Checkout
+            <p data-bs-dismiss="offcanvas" aria-label="Close">
+              Checkout
+            </p>
           </button>
         </div>
       </div>

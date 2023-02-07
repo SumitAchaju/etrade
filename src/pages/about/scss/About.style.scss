@@ -1,0 +1,9 @@
+.aboutslidecardteam{
+    img{
+        object-fit: cover;
+        transition: .4s;
+        &:hover{
+            scale: 1.1;
+        }
+    }
+}

@@ -8,6 +8,7 @@ import Shop from "./pages/shop/Shop";
 import ProductShow from "./pages/product/ProductShow";
 import WishList from "./pages/wishlist/WishList";
 import CheckOut from "./pages/checkout/CheckOut";
+import About from "./pages/about/About";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ export const router = createBrowserRouter(
       <Route path="/product/:id" element={<ProductShow/>}/>
       <Route path="/wishlist" element={<WishList/>}/>
       <Route path="/checkout" element={<CheckOut/>}/>
+      <Route path="/about" element={<About/>}/>
     </Route>
   )
 );
