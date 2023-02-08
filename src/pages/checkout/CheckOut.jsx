@@ -93,8 +93,8 @@ function CheckOutFirst() {
       <div className="mt-5">
         <div className="checkoutinput">
           <textarea
-            className="form-control my-4 py-3 px-4"
-            type={"text"}
+            className="form-control py-3 px-4"
+            type="text"
             placeholder="Notes about your order, e.g. speacial notes for delivery."
             name="additionalinfo"
             rows={5}
@@ -213,7 +213,7 @@ function CheckOutSecond() {
   );
 }
 
-function Input(props) {
+export function Input(props) {
   return (
     <>
       <div className="checkoutinput">

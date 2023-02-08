@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./scss/Navigation.style.scss";
 import OffCanvas, {
   CategoryOffCanvasBody,
@@ -9,10 +9,10 @@ import OffCanvas, {
 import { useSelector } from "react-redux";
 
 export default function Navigation() {
+  const go = useNavigate();
   const { amount } = useSelector((store) => store.cart);
   let classList = ["navlink-home-container"];
   const [scrolled, setScrolled] = useState(false);
-
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -31,7 +31,7 @@ export default function Navigation() {
     classList.push("scrolled");
     classList.push("displayNone");
   }
-  
+
   return (
     <>
       <nav className={classList.join(" ")}>
@@ -60,9 +60,46 @@ export default function Navigation() {
             <div className="col-lg-8 d-md-none d-lg-block d-none">
               <div className="d-flex align-items-center gap-5 ms-5 navlinks-home">
                 {HomeNavLinks.map((item, index) => (
-                  <Link key={`navlinkhome${index}`} to={item.route}>
-                    {item.title}
-                  </Link>
+                  <div
+                    key={`navlinkhome${index}`}
+                    className="navlinks-home-single"
+                  >
+                    <Link className="d-block" to={item.route}>
+                      {item.title}
+                    </Link>
+                    {item.hover ? (
+                      <div className="nav-hover">
+                        <ul>
+                          {item.hoverLink.map((item, index) => {
+                            if (item.hoverlink === "Cart") {
+                              return (
+                                <li
+                                  data-bs-toggle="offcanvas"
+                                  data-bs-target="#endcart"
+                                  aria-controls="endcart"
+                                  onClick={() => go(item.hoverLinkRoute)}
+                                  key={index}
+                                >
+                                  {item.hoverlink}
+                                </li>
+                              );
+                            } else {
+                              return (
+                                <li
+                                  onClick={() => go(item.hoverLinkRoute)}
+                                  key={index}
+                                >
+                                  {item.hoverlink}
+                                </li>
+                              );
+                            }
+                          })}
+                        </ul>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
@@ -80,7 +117,7 @@ export default function Navigation() {
                 >
                   <i className="bi bi-cart" value={amount}></i>
                 </Link>
-                <Link className="hover-effect-circle" to=" ">
+                <Link className="hover-effect-circle" to="#">
                   <i className="bi bi-person"></i>
                 </Link>
                 <Link
@@ -136,11 +173,26 @@ export const HomeNavLinks = [
   },
   {
     title: "Pages",
-    route: "",
+    route: "#",
+    hover: true,
+    hoverLink: [
+      {
+        hoverlink: "Cart",
+        hoverLinkRoute: "#",
+      },
+      {
+        hoverlink: "Wishlist",
+        hoverLinkRoute: "/wishlist",
+      },
+      {
+        hoverlink: "Checkout",
+        hoverLinkRoute: "/checkout",
+      },
+    ],
   },
   {
     title: "Contact",
-    route: "",
+    route: "/contact",
   },
 ];
 

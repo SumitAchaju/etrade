@@ -55,7 +55,7 @@ export function AboutComponentTags(props) {
 function AboutComponentTagsSingle(props) {
   return (
     <>
-      <div className="px-5 py-lg-5 py-4 mb-5 rounded mb-lg-0 aboutcomponenttagbox">
+      <div key={props.key} className="px-5 py-lg-5 py-4 mb-5 rounded mb-lg-0 aboutcomponenttagbox">
         <div>
           <img
             style={{ width: "60px", height: "60px", objectFit: "cover" }}
