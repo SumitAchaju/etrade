@@ -65,7 +65,7 @@ export const homeOfferData = {
     titleColor: "#ff4b7e",
     title: "Don't Miss!!",
   },
-  img: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png",
+  img: "/images/newsletter/bgimage-2.png",
   title: "Enhance Your Music Experience",
   timer: {
     fontSize: "18px",

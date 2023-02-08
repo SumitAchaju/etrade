@@ -83,7 +83,7 @@ function SelectOption(props) {
           outline: "none",
           cursor: "pointer",
           background:
-            "url(https://new.axilthemes.com/demo/template/etrade/assets/images/icons/arrow-icon2.png) 85% center no-repeat rgba(0,0,0,0)",
+            "url(/images/logo/arrow-icon.png) 85% center no-repeat rgba(0,0,0,0)",
         }}
         className="rounded fw-bold"
         name={props.name}

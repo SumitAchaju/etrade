@@ -11,7 +11,7 @@ export default function HeaderTop() {
             <div className="col-lg-2 col-md-3 col-sm-6 col-6">
               <Link to="/">
                 <img
-                  src="https://new.axilthemes.com/demo/template/etrade/assets/images/logo/logo.png"
+                  src="/images/logo/brandlogo.png"
                   alt="brand-logo"
                 />
               </Link>

@@ -113,7 +113,7 @@ function FooterDownloadApp() {
             <Link className="d-block" to="">
               <img
                 width={"98px"}
-                src="https://new.axilthemes.com/demo/template/etrade/assets/images/others/qr.png"
+                src="/images/footerimage/qr.png"
                 alt="qr code"
               />
             </Link>
@@ -121,14 +121,14 @@ function FooterDownloadApp() {
               <Link to="" className="d-block mb-3">
                 <img
                   width={"140px"}
-                  src="https://new.axilthemes.com/demo/template/etrade/assets/images/others/app-store.png"
+                  src="/images/footerimage/app-store.png"
                   alt="link"
                 />
               </Link>
               <Link to="">
                 <img
                   width={"140px"}
-                  src="https://new.axilthemes.com/demo/template/etrade/assets/images/others/play-store.png"
+                  src="/images/footerimage/play-store.png"
                   alt="link"
                 />
               </Link>

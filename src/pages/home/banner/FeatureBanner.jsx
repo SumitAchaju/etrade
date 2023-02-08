@@ -18,7 +18,7 @@ export default function FeatureBanner() {
 }
 
 const featurebannerdata = {
-    img:"https://new.axilthemes.com/demo/template/etrade/assets/images/product/product-41.png",
+    img:"/images/bannerimage/banner4.png",
     title:"Stylish Leather Bag",
     price:"29.99"
 }

@@ -87,7 +87,7 @@ const slideData = [
     name: "James C.Aderson",
     profession: "Head Of Idea",
     personImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/testimonial/image-1.png",
+      "images/testimonialperson/person-3.png",
     message:
       "“ It’s amazing how much easier it has been tomeet new people and create instantly non connections. I have the exact same personalthe only thing that has changed is my mindset and a few behaviors. “",
   },
@@ -95,7 +95,7 @@ const slideData = [
     name: "James C.Aderson",
     profession: "Head Of Idea",
     personImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/testimonial/image-2.png",
+      "images/testimonialperson/person-1.png",
     message:
       "“ It’s amazing how much easier it has been tomeet new people and create instantly non connections. I have the exact same personalthe only thing that has changed is my mindset and a few behaviors. “",
   },
@@ -103,7 +103,7 @@ const slideData = [
     name: "James C.Aderson",
     profession: "Head Of Idea",
     personImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/testimonial/image-3.png",
+      "images/testimonialperson/person-2.png",
     message:
       "“ It’s amazing how much easier it has been tomeet new people and create instantly non connections. I have the exact same personalthe only thing that has changed is my mindset and a few behaviors. “",
   },

@@ -91,29 +91,29 @@ function SlideCard(props) {
 
 const slideData = [
   {
-    img: "https://new.axilthemes.com/demo/template/etrade/assets/images/team/team-01.png",
+    img: "/images/about/team-01.png",
     position: "Founder",
     name: "Rosalina D. Willson",
   },
   {
-    img: "https://new.axilthemes.com/demo/template/etrade/assets/images/team/team-02.png",
+    img: "/images/about/team-02.png",
     position: "CEO",
     name: "Ukolili X. Xilanorix",
   },
   {
-    img: "https://new.axilthemes.com/demo/template/etrade/assets/images/team/team-03.png",
+    img: "/images/about/team-03.png",
     position: "Desiginer",
     name: "Alanso M. Mikolanax",
   },
   {
-    img: "https://new.axilthemes.com/demo/template/etrade/assets/images/team/team-04.png",
+    img: "/images/about/team-04.png",
     position: "Desiginer",
     name: "Alanso M. Mikolanax",
   },
 ];
 
 const aboutComponentData1 = {
-  img: "https://new.axilthemes.com/demo/template/etrade/assets/images/about/about-01.png",
+  img: "/images/about/about-01.png",
   icon: {
     iconColor: "white",
     icon: "bi-basket",
@@ -131,19 +131,19 @@ const aboutComponentData1 = {
 
 const aboutComponentDataTagsData = [
   {
-    img: "https://new.axilthemes.com/demo/template/etrade/assets/images/about/shape-01.png",
+    img: "/images/about/shape-01.png",
     title: "40,000+ Happy Customer",
     description:
       "Empower your sales teams with industry tailored solutions that support.",
   },
   {
-    img: "https://new.axilthemes.com/demo/template/etrade/assets/images/about/shape-02.png",
+    img: "/images/about/shape-02.png",
     title: "16 Years of Experiences",
     description:
       "Empower your sales teams with industry tailored solutions that support.",
   },
   {
-    img: "https://new.axilthemes.com/demo/template/etrade/assets/images/about/shape-03.png",
+    img: "/images/about/shape-03.png",
     title: "12 Awards Won",
     description:
       "Empower your sales teams with industry tailored solutions that support.",
@@ -151,13 +151,13 @@ const aboutComponentDataTagsData = [
 ];
 const featureData=[
   {
-    img:"https://new.axilthemes.com/demo/template/etrade/assets/images/about/about-02.png",
+    img:"/images/about/about-02.png",
     feature:"Features #01",
     title:"Solutions that work together",
     description:"Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services."
   },
   {
-    img:"https://new.axilthemes.com/demo/template/etrade/assets/images/about/about-03.png",
+    img:"/images/about/about-03.png",
     feature:"Features #02",
     title:"Solutions that work together",
     description:"Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services."

@@ -39,25 +39,25 @@ export function FooterTopSingle(props) {
 export const footerTopData = [
   {
     iconImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/icons/service1.png",
+      "/images/footerimage/icon-1.png",
     title: "Fast & Secure Delivery",
     desc: "Tell about your service.",
   },
   {
     iconImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/icons/service2.png",
+      "/images/footerimage/icon-2.png",
     title: "Money Back Guarantee",
     desc: "Within 10 days.",
   },
   {
     iconImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/icons/service3.png",
+      "/images/footerimage/icon-3.png",
     title: "24 Hour Return Policy",
     desc: "No question ask.",
   },
   {
     iconImg:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/icons/service4.png",
+      "/images/footerimage/icon-4.png",
     title: "Pro Quality Support",
     desc: "24/7 Live support.",
   },

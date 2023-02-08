@@ -46,5 +46,5 @@ export const newsLetterData = {
   titleColor: "#3577F0",
   newsLetterTitle: "Get weekly update",
   bgImg:
-    "https://new.axilthemes.com/demo/template/etrade/assets/images/bg/bg-image-5.jpg",
+    "/images/newsletter/bgimage-1.jpg",
 };

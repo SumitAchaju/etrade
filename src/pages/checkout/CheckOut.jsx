@@ -184,7 +184,7 @@ function CheckOutSecond() {
                 </label>
                 <div>
                   <img
-                    src="https://new.axilthemes.com/demo/template/etrade/assets/images/others/payment.png"
+                    src="/images/footerimage/payment.png"
                     alt="img"
                   />
                 </div>

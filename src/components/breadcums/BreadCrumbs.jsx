@@ -40,7 +40,7 @@ export default function BreadCrumbs({ title, link }) {
           </div>
           <div>
             <img
-              src="https://new.axilthemes.com/demo/template/etrade/assets/images/product/product-45.png"
+              src="/images/breadcrumbs/breadcrumbimg.png"
               alt="iimg"
             />
           </div>

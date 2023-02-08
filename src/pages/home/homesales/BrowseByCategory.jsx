@@ -70,55 +70,55 @@ function SlideCard(props) {
 }
 
 const imgLink =
-  "https://new.axilthemes.com/demo/template/etrade/assets/images/product/categories";
+  "/images/browsebycategory";
 
 const slideData = [
   {
-    img: `${imgLink}/elec-4.png`,
+    img: `${imgLink}/browse-01.png`,
     title: "Phones",
   },
   {
-    img: `${imgLink}/elec-5.png`,
+    img: `${imgLink}/browse-02.png`,
     title: "Computers",
   },
   {
-    img: `${imgLink}/elec-11.png`,
+    img: `${imgLink}/browse-03.png`,
     title: "Accessories",
   },
   {
-    img: `${imgLink}/elec-6.png`,
+    img: `${imgLink}/browse-04.png`,
     title: "Laptops",
   },
   {
-    img: `${imgLink}/elec-2.png`,
+    img: `${imgLink}/browse-05.png`,
     title: "Moniter",
   },
   {
-    img: `${imgLink}/elec-7.png`,
+    img: `${imgLink}/browse-06.png`,
     title: "Networking",
   },
   {
-    img: `${imgLink}/elec-8.png`,
+    img: `${imgLink}/browse-07.png`,
     title: "PC Gaming",
   },
   {
-    img: `${imgLink}/elec-1.png`,
+    img: `${imgLink}/browse-08.png`,
     title: "Smartwatches",
   },
   {
-    img: `${imgLink}/elec-9.png`,
+    img: `${imgLink}/browse-09.png`,
     title: "Headphones",
   },
   {
-    img: `${imgLink}/elec-10.png`,
+    img: `${imgLink}/browse-10.png`,
     title: "Camera & Photo",
   },
   {
-    img: `${imgLink}/elec-8.png`,
+    img: `${imgLink}/browse-08.png`,
     title: "Video Games",
   },
   {
-    img: `${imgLink}/elec-1.png`,
+    img: `${imgLink}/browse-01.png`,
     title: "Sports",
   },
 ];

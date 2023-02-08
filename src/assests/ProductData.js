@@ -6,7 +6,7 @@ let ProductData = [
     newPrice: 60,
     discount: 20,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-02.png",
+      "/images/productimage/product-01.png",
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
     star: 5,
     reviewNo: 66,
@@ -38,7 +38,7 @@ let ProductData = [
     previousPrice: 50,
     newPrice: 40,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-19.png",
+      "/images/productimage/product-02.png",
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
     star: 4.5,
     reviewNo: 18,
@@ -71,7 +71,7 @@ let ProductData = [
     newPrice: 24,
     discount: 50,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-6.png",
+      "/images/productimage/product-03.png",
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
     star: 3,
     reviewNo: 2,
@@ -104,7 +104,7 @@ let ProductData = [
     newPrice: 40,
     discount: 30,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/jewellery/product-4.png",
+      "/images/productimage/product-04.png",
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
     star: 2.5,
     reviewNo: 52,
@@ -136,7 +136,7 @@ let ProductData = [
     previousPrice: 60,
     newPrice: 50,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-5.png",
+      "/images/productimage/product-05.png",
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
     star: 4,
     reviewNo: 11,
@@ -169,7 +169,7 @@ let ProductData = [
     newPrice: 24,
     discount: 50,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-04.png",
+      "/images/productimage/product-06.png",
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
     star: 3.5,
     reviewNo: 7,
@@ -202,7 +202,7 @@ let ProductData = [
     newPrice: 60,
     discount: 25,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-4.png",
+      "/images/productimage/product-07.png",
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
     star: 5,
     reviewNo: 22,
@@ -234,7 +234,7 @@ let ProductData = [
     previousPrice: 100,
     newPrice: 75,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-3.png",
+      "/images/productimage/product-08.png",
     star: 4,
     reviewNo: 33,
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
@@ -263,7 +263,7 @@ let ProductData = [
   {
     id: 9,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-05.png",
+      "/images/productimage/product-09.png",
     star: 4.5,
     reviewNo: 18,
     title: "Bass Meets Clarity",
@@ -295,7 +295,7 @@ let ProductData = [
   {
     id: 10,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-15.png",
+      "/images/productimage/product-10.png",
     star: 5,
     reviewNo: 31,
     title: "Nike Shoes",
@@ -327,7 +327,7 @@ let ProductData = [
   {
     id: 11,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-24.png",
+      "/images/productimage/product-11.png",
     star: 3,
     reviewNo: 20,
     title: "Stylish Chair",
@@ -358,7 +358,7 @@ let ProductData = [
   {
     id: 12,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/jewellery/product-10.png",
+      "/images/productimage/product-12.png",
     star: 3.5,
     reviewNo: 53,
     title: "Diamond Bracelet",
@@ -389,7 +389,7 @@ let ProductData = [
   {
     id: 13,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-25.png",
+      "/images/productimage/product-13.png",
     star: 2.5,
     reviewNo: 25,
     title: "Smart Watch",
@@ -421,7 +421,7 @@ let ProductData = [
   {
     id: 14,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-10.png",
+      "/images/productimage/product-14.png",
     star: 5,
     reviewNo: 101,
     title: "Womens Cosmetics",
@@ -452,7 +452,7 @@ let ProductData = [
   {
     id: 15,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/jewellery/product-12.png",
+      "/images/productimage/product-15.png",
     star: 3.5,
     reviewNo: 5,
     title: "Denim White Ring",
@@ -484,7 +484,7 @@ let ProductData = [
   {
     id: 16,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-13.png",
+      "/images/productimage/product-16.png",
     star: 5,
     reviewNo: 24,
     title: "Royal Watch",
@@ -516,7 +516,7 @@ let ProductData = [
   {
     id: 17,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-01.png",
+      "/images/productimage/product-17.png",
     star: 4.5,
     reviewNo: 18,
     title: "Bass Meets Clarity",
@@ -549,7 +549,7 @@ let ProductData = [
   {
     id: 18,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-15.png",
+      "/images/productimage/product-10.png",
     star: 5,
     reviewNo: 31,
     title: "Nike Shoes",
@@ -581,7 +581,7 @@ let ProductData = [
   {
     id: 19,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-1.png",
+      "/images/productimage/product-18.png",
     star: 3,
     reviewNo: 20,
     title: "Stylish Chair",
@@ -613,7 +613,7 @@ let ProductData = [
   {
     id: 20,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/jewellery/product-3.png",
+      "/images/productimage/product-19.png",
     star: 3.5,
     reviewNo: 53,
     title: "Diamond Bracelet",
@@ -644,7 +644,7 @@ let ProductData = [
   {
     id: 21,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-10.png",
+      "/images/productimage/product-14.png",
     star: 2.5,
     reviewNo: 25,
     title: "Smart Watch",
@@ -677,7 +677,7 @@ let ProductData = [
   {
     id: 22,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-16.png",
+      "/images/productimage/product-20.png",
     star: 5,
     reviewNo: 101,
     title: "Womens Cosmetics",
@@ -709,10 +709,10 @@ let ProductData = [
   {
     id: 23,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-07.png",
+      "/images/productimage/product-21.png",
     star: 3.5,
     reviewNo: 5,
-    title: "Denim White Ring",
+    title: "Zone Headphone",
     newPrice: 40,
     previousPrice: 60,
     discount: 20,
@@ -742,10 +742,10 @@ let ProductData = [
   {
     id: 24,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/furniture/product-15.png",
+      "/images/productimage/product-22.png",
     star: 5,
     reviewNo: 24,
-    title: "Royal Watch",
+    title: "Wodden Box Waredoor",
     newPrice: 96,
     discount: 100,
     color: ["#FF8666", "#FF497C", "#8D6ABE"],
@@ -774,7 +774,7 @@ let ProductData = [
   {
     id: 25,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-14.png",
+      "/images/productimage/product-23.png",
     star: 4.5,
     reviewNo: 18,
     title: "Full A-Line Dress",
@@ -807,7 +807,7 @@ let ProductData = [
   {
     id: 26,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-15.png",
+      "/images/productimage/product-10.png",
     star: 5,
     reviewNo: 31,
     title: "Nike Shoes",
@@ -840,7 +840,7 @@ let ProductData = [
   {
     id: 27,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-4.png",
+      "/images/productimage/product-24.png",
     star: 3,
     reviewNo: 20,
     title: "Guys Bomber Jacket",
@@ -872,7 +872,7 @@ let ProductData = [
   {
     id: 28,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-5.png",
+      "/images/productimage/product-25.png",
     star: 3.5,
     reviewNo: 53,
     discount: 20,
@@ -904,7 +904,7 @@ let ProductData = [
   {
     id: 29,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-10.png",
+      "/images/productimage/product-14.png",
     star: 2.5,
     reviewNo: 25,
     title: "Smart Watch",
@@ -937,7 +937,7 @@ let ProductData = [
   {
     id: 30,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-11.png",
+      "/images/productimage/product-26.png",
     star: 5,
     reviewNo: 101,
     title: "Womens Cosmetics",
@@ -969,7 +969,7 @@ let ProductData = [
   {
     id: 31,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-12.png",
+      "/images/productimage/product-27.png",
     star: 3.5,
     reviewNo: 5,
     title: "Denim White Ring",
@@ -1002,7 +1002,7 @@ let ProductData = [
   {
     id: 32,
     productImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-13.png",
+      "/images/productimage/product-16.png",
     star: 5,
     reviewNo: 24,
     title: "Royal Watch",

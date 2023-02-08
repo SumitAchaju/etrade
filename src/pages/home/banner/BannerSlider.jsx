@@ -72,7 +72,7 @@ const slideData = [
     offerName: "Mega Deal",
     offer: "Up to 60% off Sales",
     offerImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/product-9.png",
+      "/images/bannerimage/banner1.png",
   },
   {
     offerIcon: (
@@ -84,7 +84,7 @@ const slideData = [
     offerName: "Hot Deal",
     offer: "Up to 60% off Voucher",
     offerImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/product-8.png",
+      "/images/bannerimage/banner2.png",
   },
   {
     offerIcon: (
@@ -96,6 +96,6 @@ const slideData = [
     offerName: "Smartphone",
     offer: "Up to 60% off Voucher",
     offerImage:
-      "https://new.axilthemes.com/demo/template/etrade/assets/images/product/product-7.png",
+      "/images/bannerimage/banner3.png",
   },
 ];

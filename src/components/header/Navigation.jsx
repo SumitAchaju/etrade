@@ -41,7 +41,7 @@ export default function Navigation() {
               {scrolled ? (
                 <Link to="/">
                   <img
-                    src="https://new.axilthemes.com/demo/template/etrade/assets/images/logo/logo.png"
+                    src="/images/logo/brandlogo.png"
                     alt="img"
                   />
                 </Link>
@@ -197,7 +197,7 @@ export const HomeNavLinks = [
 ];
 
 const imglink =
-  "https://new.axilthemes.com/demo/template/etrade/assets/images/product/categories";
+  "/images/logo/";
 
 export const categoriesData = [
   {

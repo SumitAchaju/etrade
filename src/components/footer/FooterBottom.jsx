@@ -27,17 +27,17 @@ export default function FooterBottom() {
               </p>
               <img
                 height={"20px"}
-                src="https://new.axilthemes.com/demo/template/etrade/assets/images/icons/cart/cart-1.png"
+                src="/images/footerimage/paypal.png"
                 alt="img"
               />
               <img
                 height={"20px"}
-                src="https://new.axilthemes.com/demo/template/etrade/assets/images/icons/cart/cart-2.png"
+                src="/images/footerimage/mastercard.png"
                 alt="img"
               />
               <img
                 height={"20px"}
-                src="https://new.axilthemes.com/demo/template/etrade/assets/images/icons/cart/cart-5.png"
+                src="/images/footerimage/visa.png"
                 alt="img"
               />
             </div>
