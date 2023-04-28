@@ -27,7 +27,7 @@ export default function FlashSales() {
             title="Flash Sales"
             timer={{
               fontSize: "15px",
-              deadLine: "2023-5-4",
+              deadLine: "2023-6-4",
               area: "60px",
               background: "#f7f7f7",
             }}

@@ -69,7 +69,7 @@ export const homeOfferData = {
   title: "Enhance Your Music Experience",
   timer: {
     fontSize: "18px",
-    deadLine: "2023-4-25",
+    deadLine: "2023-6-25",
     area: "70px",
     background: "white",
   }
