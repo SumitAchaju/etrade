@@ -150,7 +150,7 @@ function CheckOutSecond() {
                   defaultChecked
                   id="bankpayment"
                   value="bankpayment"
-                  name="bankpayment"
+                  name="payment"
                 />
                 <span className="checkmark rounded-circle"></span>
               </label>
@@ -165,7 +165,7 @@ function CheckOutSecond() {
             <div className="mb-3">
               <label htmlFor="cashpayment" className="checkmark-container">
                 Cash on delivery
-                <input type="radio" id="cashpayment" name="cashpayment" value="cashpayment" />
+                <input type="radio" id="cashpayment" name="payment" value="cashpayment" />
                 <span className="checkmark rounded-circle"></span>
               </label>
             </div>
@@ -180,7 +180,7 @@ function CheckOutSecond() {
                     type="radio"
                     id="paypalpayment"
                     value="paypalpayment"
-                    name="paypalpayment"
+                    name="payment"
                   />
                   <span className="checkmark rounded-circle"></span>
                 </label>
