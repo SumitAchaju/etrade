@@ -14,7 +14,7 @@ export default function FooterBottom() {
               className="fw-bold text-center"
               style={{ color: "gray", fontSize: "14px" }}
             >
-              © 2022. All rights reserved by Axilthemes.
+              © 2022. All rights reserved.
             </p>
           </div>
           <div className="col-12 col-lg-4">
